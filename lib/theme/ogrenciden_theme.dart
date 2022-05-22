@@ -6,7 +6,7 @@ class OgrencidenTheme {
     return ThemeData(
         //2
         primaryColor: const Color(0xff2b6ea7),
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: const Color(0xff889bab),
         fontFamily: 'Montserrat', //3
         buttonTheme: ButtonThemeData(
           // 4
