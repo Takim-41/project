@@ -6,13 +6,13 @@ class OgrencidenTheme {
     return ThemeData(
         //2
         primaryColor: const Color(0xff2b6ea7),
-        scaffoldBackgroundColor: const Color(0xff889bab),
+        scaffoldBackgroundColor: Colors.white,
         fontFamily: 'Montserrat', //3
         buttonTheme: ButtonThemeData(
           // 4
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
-          buttonColor: const Color(0xff2b6ea7),
+          buttonColor: const Color(0xff889bab),
         ));
   }
 }
