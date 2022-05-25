@@ -20,13 +20,13 @@ class Categories extends StatelessWidget {
                   unis: "books",
                   press: () {}
               ),
-              SizedBox(height:5),
+              SizedBox(height:10),
               CategoryCards(
                   image: "assets/images/electronics.png",
                   unis: "electronics",
                   press: () {}
               ),
-              SizedBox(height:5),
+              SizedBox(height:10),
               CategoryCards(
                   image: "assets/images/notes.png",
                   unis: "notes",
