@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ogrenciden/LandingScreen/components/search_bar.dart';
 import 'package:ogrenciden/LandingScreen/components/uni_category.dart';
 import 'package:ogrenciden/LandingScreen/components/universities.dart';
+import 'package:ogrenciden/UniCategoryScreen/uni_catagory.dart';
 
 import '../../ProductCategoryScreen/prod_category.dart';
 import 'app_name.dart';
@@ -26,7 +27,7 @@ class Body extends StatelessWidget {
             SizedBox(height:15),
             UniCategory(
               text: "Universities",
-              press: () {}
+              press: () => Navigator.pushNamed(context, UniversityScreen.routeName)
             ),
             SizedBox(height:15),
             Universities(),

@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      //home: LandingScreen(),
-      home: CategoryScreen(),
+      home: LandingScreen(),
       routes:routes
     );
   }
