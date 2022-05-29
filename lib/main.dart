@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ogrenciden/core/init/navigation/navigation_route.dart';
+import 'package:ogrenciden/core/init/navigation/navigation_service.dart';
 import 'package:ogrenciden/LandingScreen/landing.dart';
 import 'package:ogrenciden/ProductCategoryScreen/prod_category.dart';
 import 'package:ogrenciden/routs.dart';
@@ -18,7 +20,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: OgrencidenTheme.lightTheme,
+      initialRoute: '/product_info_page', //initially displayed page
+      onGenerateRoute:
+          NavigationRoute.instance.generateRoute, // route controller
+      navigatorKey: NavigationService
+          .instance.navigatorKey, //GlobalKey as the NavigatorKey
+    );
+  }
+}
       home: LandingScreen(),
       routes:routes
     );
