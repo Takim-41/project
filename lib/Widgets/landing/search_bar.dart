@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../size_config.dart';
+import '../../core/size_config.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
@@ -9,9 +9,8 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(20)
-        ),
+        padding:
+            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
         child: Row(
           children: [
             Container(
@@ -19,10 +18,9 @@ class SearchBar extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                   color: kSecondaryColor.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(15)
-              ),
+                  borderRadius: BorderRadius.circular(15)),
               child: TextField(
-                onChanged: (value){
+                onChanged: (value) {
                   //Searching part of the entered product !!!!!!!!!
                 },
                 decoration: InputDecoration(
@@ -38,7 +36,6 @@ class SearchBar extends StatelessWidget {
               ),
             )
           ],
-        )
-    );
+        ));
   }
 }

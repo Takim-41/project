@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../cus_bottom_nav_bar.dart';
-import '../enums.dart';
-import '../size_config.dart';
-import 'components/body.dart';
+import '../Widgets/cus_bottom_nav_bar.dart';
+import '../core/enums.dart';
+import '../core/size_config.dart';
+import '../Widgets/prod_category/body.dart';
 
 class CategoryScreen extends StatelessWidget {
   static String routeName = "/ProductCategoryScreen";
@@ -13,8 +13,8 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: Body(),
-      bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home)
-    );
+        body: Body(),
+        bottomNavigationBar:
+            CusBottomNavigationBar(selectedMenu: MenuState.home));
   }
 }

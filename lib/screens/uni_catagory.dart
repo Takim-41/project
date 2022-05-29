@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../cus_bottom_nav_bar.dart';
-import '../enums.dart';
-import 'Components/body.dart';
+import '../Widgets/cus_bottom_nav_bar.dart';
+import '../core/enums.dart';
+import '../Widgets/uni_category/body.dart';
 
 class UniversityScreen extends StatelessWidget {
   static String routeName = "/UniCategoryScreen";
@@ -11,8 +11,8 @@ class UniversityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Body(),
-      bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home)
-    );
+        body: Body(),
+        bottomNavigationBar:
+            CusBottomNavigationBar(selectedMenu: MenuState.home));
   }
 }

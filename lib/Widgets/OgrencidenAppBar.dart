@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ogrenciden/LandingScreen/components/body.dart';
-import 'package:ogrenciden/enums.dart';
-import 'package:ogrenciden/size_config.dart';
+import 'package:ogrenciden/widgets/landing/body.dart';
+import 'package:ogrenciden/core/enums.dart';
+import 'package:ogrenciden/core/size_config.dart';
 
 class CusBottomNavigationBar extends StatelessWidget {
   const CusBottomNavigationBar({Key? key, required this.selectedMenu})

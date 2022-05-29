@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/forgetPasswordScreen.dart';
+import 'package:ogrenciden/screens/forgetPasswordScreen.dart';
 //import 'package:login_signup_screen/login_form.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
-
 
   @override
   State<login> createState() => _loginState();
@@ -15,7 +14,6 @@ class _loginState extends State<login> {
 
   var tfemail = TextEditingController();
   var tfpassword = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -29,17 +27,19 @@ class _loginState extends State<login> {
             //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding:  EdgeInsets.all(sceenWidthInfo/25),
-                child: Text("öğrenciden", style: TextStyle(fontSize: sceenWidthInfo/10, color: Colors.indigo),),
+                padding: EdgeInsets.all(sceenWidthInfo / 25),
+                child: Text(
+                  "öğrenciden",
+                  style: TextStyle(
+                      fontSize: sceenWidthInfo / 10, color: Colors.indigo),
+                ),
               ),
-
               Form(
                 key: formKey,
                 child: Column(
                   children: [
-
                     Padding(
-                      padding:  EdgeInsets.all(sceenHeightInfo/40),
+                      padding: EdgeInsets.all(sceenHeightInfo / 40),
                       child: TextFormField(
                         controller: tfemail,
                         decoration: const InputDecoration(
@@ -51,8 +51,8 @@ class _loginState extends State<login> {
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10.0)),
-
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
                           ),
                           labelText: "Email",
                           labelStyle: TextStyle(
@@ -65,12 +65,14 @@ class _loginState extends State<login> {
                             return "Mail adresinizi giriniz";
                           }
 
-                          return tfemail.text.contains("@edu.tr") ? null:"Mail adresi edu.tr uzantılı olmalı";
+                          return tfemail.text.contains("@edu.tr")
+                              ? null
+                              : "Mail adresi edu.tr uzantılı olmalı";
                         },
                       ),
                     ),
                     Padding(
-                      padding:  EdgeInsets.all(sceenHeightInfo/40),
+                      padding: EdgeInsets.all(sceenHeightInfo / 40),
                       child: TextFormField(
                         controller: tfpassword,
                         obscureText: true,
@@ -83,14 +85,14 @@ class _loginState extends State<login> {
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
                           ),
                           labelText: "Şifre",
                           labelStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 17,
                           ),
-
                         ),
                         validator: (tfinput) {
                           if (tfinput!.isEmpty) {
@@ -104,10 +106,14 @@ class _loginState extends State<login> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 8.0, right: 30.0, left: 20.0, bottom: 8.0),
+                      padding: const EdgeInsets.only(
+                          top: 8.0, right: 30.0, left: 20.0, bottom: 8.0),
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const password()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const password()));
                         },
                         child: Align(
                           alignment: Alignment.topLeft,
@@ -117,45 +123,41 @@ class _loginState extends State<login> {
                               color: Colors.indigo,
                               fontWeight: FontWeight.w400,
                               fontSize: sceenWidthInfo / 30,
-
-
                             ),
-
                           ),
                         ),
                       ),
                     ),
-
-
                     Padding(
-                      padding:  EdgeInsets.all(sceenHeightInfo/40),
+                      padding: EdgeInsets.all(sceenHeightInfo / 40),
                       child: SizedBox(
-                        width: sceenWidthInfo/1.1,
-                        height: sceenHeightInfo/12 ,
+                        width: sceenWidthInfo / 1.1,
+                        height: sceenHeightInfo / 12,
                         child: ElevatedButton(
-                          child: Text("GİRİŞ YAP", style: TextStyle(
-                              fontSize: sceenWidthInfo / 25, color: Colors.white)),
+                          child: Text("GİRİŞ YAP",
+                              style: TextStyle(
+                                  fontSize: sceenWidthInfo / 25,
+                                  color: Colors.white)),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.indigo,
                             //shadowColor: Colors.lightGreen,
                             //elevation: 20,
                             shape: const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
                               side: BorderSide(color: Colors.white),
                             ),
                           ),
                           onPressed: () {
-                            bool controlResult = formKey.currentState!.validate();
-                            if (controlResult) {
-
-                            }
+                            bool controlResult =
+                                formKey.currentState!.validate();
+                            if (controlResult) {}
                           },
-
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top:15.0),
+                      padding: const EdgeInsets.only(top: 15.0),
                       child: Center(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -166,31 +168,23 @@ class _loginState extends State<login> {
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
                                 fontSize: sceenWidthInfo / 35,
-
                               ),
-
                             ),
                             GestureDetector(
-                              onTap: (){
-
-                              },
+                              onTap: () {},
                               child: Text(
                                 "Hemen üye ol.",
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,
                                   fontSize: sceenWidthInfo / 35,
-
                                 ),
-
                               ),
                             ),
-
                           ],
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
