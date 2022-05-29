@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/theme/ogrenciden_theme.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
