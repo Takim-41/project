@@ -3,6 +3,8 @@ import 'package:ogrenciden/LandingScreen/landing.dart';
 import 'package:ogrenciden/ProductCategoryScreen/prod_category.dart';
 import 'package:ogrenciden/routs.dart';
 
+import 'ListProductScreen/list_product.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: LandingScreen(),
+       // home: ListScreen(),
       routes:routes
     );
   }

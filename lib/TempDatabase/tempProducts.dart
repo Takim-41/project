@@ -24,47 +24,47 @@ List<TempProduct> product =[
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
-      price: 160,
+      price: 200,
       category: "Books",
       university: "Bilkent"
   ),
   TempProduct(
       id: 2,
-      title:"Math 102 Books",
+      title:"Physc 102 Books",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
-      price: 160,
+      price: 120,
       category: "Books",
       university: "Bilkent"
   ),
   TempProduct(
       id: 3,
-      title:"Math 102 Books",
+      title:"Temp 102 Books",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
-      price: 160,
+      price: 500,
       category: "Books",
       university: "Bilkent"
   ),
   TempProduct(
       id: 4,
-      title:"Math 102 Books",
+      title:"Chem 102 Books",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
-      price: 160,
+      price: 50,
       category: "Books",
       university: "Bilkent"
   ),
   TempProduct(
       id: 5,
-      title:"Math 102 Books",
+      title:"MBG 102 Books",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
-      price: 160,
+      price: 170,
       category: "Books",
       university: "Bilkent"
   )
