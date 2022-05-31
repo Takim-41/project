@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'package:ogrenciden/ClientProfileInfo/client_profile_info.dart';
 
+import '../cus_bottom_nav_bar.dart';
+import '../enums.dart';
+
 String imagePath = "assets/images/";
 
 final List<String> imgList = ["${imagePath}book1.jpg", "${imagePath}book2.jpg"];
@@ -29,6 +32,7 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home),
       appBar: AppBar(
         title: const Text('Book Info'),
         backgroundColor: Colors.green,

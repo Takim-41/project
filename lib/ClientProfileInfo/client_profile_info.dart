@@ -3,6 +3,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
+import '../cus_bottom_nav_bar.dart';
+import '../enums.dart';
+
 class ClientProfileInfo extends StatefulWidget {
   static String routeName = "/ClientProfileInfo";
   final String? eposta;
@@ -38,6 +41,7 @@ class _ClientProfileInfoState extends State<ClientProfileInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home),
       appBar: AppBar(
         title: const Text('Profile Info'),
         backgroundColor: Colors.green,
