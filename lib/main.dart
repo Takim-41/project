@@ -4,7 +4,10 @@ import 'package:ogrenciden/ProductCategoryScreen/prod_category.dart';
 import 'package:ogrenciden/routs.dart';
 import 'package:ogrenciden/signupScreen.dart';
 
+import 'ProductInfoScreen/product_info_page.dart';
+import 'ClientProfileInfo/client_profile_info.dart';
 import 'ListProductScreen/list_product.dart';
+import 'Trial.dart';
 import 'forgetPasswordScreen.dart';
 import 'loginScreen.dart';
 
@@ -25,7 +28,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: LandingScreen(),
-      //  home: password(),
+        //home: MyHomePage(title: 'trial'),
+        //home: ProductInfoPage(),
       routes:routes
     );
   }

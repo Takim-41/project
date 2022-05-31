@@ -68,8 +68,8 @@ class UniversityCards extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
         child: SizedBox(
-            width: getProportionateScreenWidth(90),
-            height: getProportionateScreenHeight(90),
+            width: getProportionateScreenWidth(120),
+            height: getProportionateScreenHeight(120),
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Stack(

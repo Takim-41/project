@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ogrenciden/ProductInfoScreen/product_info_page.dart';
 
 //import 'package:multi_select_flutter/multi_select_flutter.dart';
 import 'package:ogrenciden/size_config.dart';
@@ -34,7 +35,8 @@ class Body extends StatelessWidget {
                 crossAxisSpacing: getProportionateScreenWidth(16),
                 childAspectRatio: 0.75
               ),
-              itemBuilder: (context, index) => ItemCard(product: product[index], press: (){}))
+              itemBuilder: (context, index) => ItemCard(product: product[index], press: () => Navigator.push(context, new MaterialPageRoute(builder: (context) => new ProductInfoPage())))
+          )
           )
         ],
       )

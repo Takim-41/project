@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            SizedBox(height:100),
+            SizedBox(height:50),
             AppName(),
             SizedBox(height:30),
             SearchBar(),

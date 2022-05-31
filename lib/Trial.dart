@@ -1,6 +1,6 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
-
+/*
 void main() {
   runApp(MyApp());
 }
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+*/
 class Animal {
   final int id;
   final String name;
@@ -30,7 +30,7 @@ class Animal {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({required Key key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 40),
+              /*SizedBox(height: 40),
               //################################################################################################
               // Rounded blue MultiSelectDialogField
               //################################################################################################
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onConfirm: (results) {
                   //_selectedAnimals = results;
                 },
-              ),
+              ),*/
               SizedBox(height: 50),
               //################################################################################################
               // This MultiSelectBottomSheetField has no decoration, but is instead wrapped in a Container that has
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: Column(
                   children: <Widget>[
-                    MultiSelectBottomSheetField(
+                    MultiSelectBottomSheetField<Animal>(
                       initialChildSize: 0.4,
                       listType: MultiSelectListType.CHIP,
                       searchable: true,
@@ -174,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //################################################################################################
               // MultiSelectBottomSheetField with validators
               //################################################################################################
-              MultiSelectBottomSheetField<Animal>(
+             /* MultiSelectBottomSheetField<Animal>(
                 key: _multiSelectKey,
                 initialChildSize: 0.7,
                 maxChildSize: 0.95,
@@ -198,7 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                   _multiSelectKey.currentState?.validate();
                 },
-                chipDisplay: MultiSelectChipDisplay(
+                chipDisplay: MultiSelectChipDisplay<Animal>(
                   onTap: (item) {
                     setState(() {
                       _selectedAnimals3.remove(item);
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //################################################################################################
               // MultiSelectDialogField with initial values
               //################################################################################################
-              MultiSelectDialogField(
+              MultiSelectDialogField<Animal>(
                 onConfirm: (val) {
                   _selectedAnimals5 = val;
                 },
@@ -237,11 +237,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 items: _items,
                 initialValue:
                 _selectedAnimals5, // setting the value of this in initState() to pre-select values.
-              ),
+              ),*/
             ],
           ),
         ),
       ),
     );
   }
-}*/
+}
