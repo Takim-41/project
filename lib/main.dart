@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/LandingScreen/landing.dart';
 import 'package:ogrenciden/ProductCategoryScreen/prod_category.dart';
-import 'package:ogrenciden/Trial.dart';
 import 'package:ogrenciden/routs.dart';
-
-import 'ListProductScreen/list_product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,9 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      //home: LandingScreen(),
-      home: ListScreen(),
-       // home: Trial(),
+      home: LandingScreen(),
       routes:routes
     );
   }
