@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'package:ogrenciden/ClientProfileInfo/client_profile_info.dart';
 
-import '../cus_bottom_nav_bar.dart';
 import '../enums.dart';
+import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
 
 String imagePath = "assets/images/";
 

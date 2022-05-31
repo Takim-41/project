@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../cus_bottom_nav_bar.dart';
 import '../enums.dart';
+import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
 import 'Components/body.dart';
 
 class UniversityScreen extends StatelessWidget {

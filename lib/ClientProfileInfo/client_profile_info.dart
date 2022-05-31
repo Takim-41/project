@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import '../cus_bottom_nav_bar.dart';
 import '../enums.dart';
+import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
 
 class ClientProfileInfo extends StatefulWidget {
   static String routeName = "/ClientProfileInfo";

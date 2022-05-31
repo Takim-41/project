@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/size_config.dart';
 
-import '../cus_bottom_nav_bar.dart';
+
 import '../enums.dart';
+import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
 import 'components/body.dart';
 
 class ListScreen extends StatelessWidget {
