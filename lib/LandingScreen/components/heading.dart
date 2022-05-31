@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import '../../size_config.dart';
 
-class UniCategory extends StatelessWidget {
-  const UniCategory({
+class Heading extends StatelessWidget {
+  const Heading({
     Key? key,
     required this.press,
     required this.text

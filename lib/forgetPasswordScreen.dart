@@ -60,7 +60,7 @@ class _passwordState extends State<password> {
                         if (tfinput!.isEmpty) {
                           return "Öğrenci Mail adresinizi giriniz";
                         }
-                        return tfemail.text.contains("@edu.tr") ? null:"Mail adresi edu.tr uzantılı olmalı";
+                        return tfemail.text.contains("edu.tr") ? null:"Mail adresi edu.tr uzantılı olmalı";
                       },
                     ),
                   ),

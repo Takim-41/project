@@ -104,7 +104,7 @@ class _signupState extends State<signup> {
                             return "Mail adresinizi giriniz";
                           }
 
-                          return tfemail.text.contains("@edu.tr")
+                          return tfemail.text.contains("edu.tr")
                               ? null
                               : "Mail adresi edu.tr uzantılı olmalı";
                         },

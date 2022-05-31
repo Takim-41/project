@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../ListProductScreen/list_product.dart';
 
 import '../../size_config.dart';
 
@@ -18,19 +19,19 @@ class Categories extends StatelessWidget {
               CategoryCards(
                   image: "assets/images/books.png",
                   unis: "books",
-                  press: () {}
+                  press: () => Navigator.pushNamed(context, ListScreen.routeName)
               ),
               SizedBox(height:10),
               CategoryCards(
                   image: "assets/images/electronics.png",
                   unis: "electronics",
-                  press: () {}
+                  press: () => Navigator.pushNamed(context, ListScreen.routeName)
               ),
               SizedBox(height:10),
               CategoryCards(
                   image: "assets/images/notes.png",
                   unis: "notes",
-                  press: () {}
+                  press: () => Navigator.pushNamed(context, ListScreen.routeName)
               ),
             ],
           ),

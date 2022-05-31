@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:ogrenciden/LandingScreen/landing.dart';
 import 'package:ogrenciden/ProductCategoryScreen/prod_category.dart';
 import 'package:ogrenciden/routs.dart';
+import 'package:ogrenciden/signupScreen.dart';
 
 import 'ListProductScreen/list_product.dart';
+import 'forgetPasswordScreen.dart';
+import 'loginScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: LandingScreen(),
-       // home: ListScreen(),
+      //  home: password(),
       routes:routes
     );
   }

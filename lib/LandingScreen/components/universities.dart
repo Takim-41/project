@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/LandingScreen/components/uni_category.dart';
+import 'package:ogrenciden/LandingScreen/components/heading.dart';
 
 import '../../size_config.dart';
 

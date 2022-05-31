@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/LandingScreen/components/search_bar.dart';
-import 'package:ogrenciden/LandingScreen/components/uni_category.dart';
+import 'package:ogrenciden/LandingScreen/components/heading.dart';
 import 'package:ogrenciden/LandingScreen/components/universities.dart';
 import 'package:ogrenciden/UniCategoryScreen/uni_catagory.dart';
 
@@ -25,14 +25,14 @@ class Body extends StatelessWidget {
             SizedBox(height:30),
             SearchBar(),
             SizedBox(height:15),
-            UniCategory(
+            Heading(
               text: "Universities",
               press: () => Navigator.pushNamed(context, UniversityScreen.routeName)
             ),
             SizedBox(height:15),
             Universities(),
             SizedBox(height:15),
-            UniCategory(
+            Heading(
               text: "Popular Categories",
               press: () => Navigator.pushNamed(context, CategoryScreen.routeName)
             ),
