@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
+
 /*
 void main() {
   runApp(MyApp());
@@ -160,12 +161,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     _selectedAnimals2 == null || _selectedAnimals2.isEmpty
                         ? Container(
-                        padding: EdgeInsets.all(10),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "None selected",
-                          style: TextStyle(color: Colors.black54),
-                        ))
+                            padding: EdgeInsets.all(10),
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "None selected",
+                              style: TextStyle(color: Colors.black54),
+                            ))
                         : Container(),
                   ],
                 ),
@@ -174,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //################################################################################################
               // MultiSelectBottomSheetField with validators
               //################################################################################################
-             /* MultiSelectBottomSheetField<Animal>(
+              /* MultiSelectBottomSheetField<Animal>(
                 key: _multiSelectKey,
                 initialChildSize: 0.7,
                 maxChildSize: 0.95,

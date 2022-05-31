@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ogrenciden/UniCategoryScreen/Components/uni_cards.dart';
 
-import 'package:ogrenciden/TempDatabase/tempUniversities.dart';
+import 'package:ogrenciden/screens/ProductCategoryScreen/components/category_cards.dart';
+import 'package:ogrenciden/TempDatabase/tempCatagories.dart';
 import 'package:ogrenciden/core/size_config.dart';
-import 'package:ogrenciden/screens/ListProductScreen/list_product.dart';
+import 'package:ogrenciden/screens/LandingScreen/landing.dart';
 
-import '../../screens/LandingScreen/landing.dart';
+import 'package:ogrenciden/screens/ListProductScreen/list_product.dart';
+import 'package:ogrenciden/screens/ProductCategoryScreen/components/category_cards.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class Body extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: Column(
             children: <Widget>[
-              Text("Universities",
+              Text("Categories",
                   style: TextStyle(
                     fontSize: getProportionateScreenWidth(25),
                     color: Colors.black.withOpacity(0.7),
@@ -45,11 +46,29 @@ class Body extends StatelessWidget {
         SizedBox(height: 15),
         Expanded(
             child: ListView.builder(
-                itemCount: uni_categories.length,
-                itemBuilder: (context, index) => UniCategoryCards(
-                    uni_categories: uni_categories[index],
+                itemCount: categories.length,
+                itemBuilder: (context, index) => CategoryCards(
+                    categories: categories[index],
                     press: () =>
                         Navigator.pushNamed(context, ListScreen.routeName))))
+
+        /*CategoryCards(
+                  image: "assets/images/books.png",
+                  unis: "books",
+                  press: () {}
+              ),
+              SizedBox(height:10),
+              CategoryCards(
+                  image: "assets/images/electronics.png",
+                  unis: "electronics",
+                  press: () {}
+              ),
+              SizedBox(height:10),
+              CategoryCards(
+                  image: "assets/images/notes.png",
+                  unis: "notes",
+                  press: () {}
+              ),*/
       ],
     ));
   }

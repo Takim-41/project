@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
+
+import 'loginScreen.dart';
 
 class signup extends StatefulWidget {
   static String routeName = "/LoginScreens";
@@ -30,7 +31,6 @@ class _signupState extends State<signup> {
     school.add("İstanbul Üniversitesi");
     school.add("Selçuk Üniversitesi");
   }
-
   Widget build(BuildContext context) {
     var sceenInfo = MediaQuery.of(context);
     final double sceenWidthInfo = sceenInfo.size.width;
@@ -44,40 +44,33 @@ class _signupState extends State<signup> {
             children: [
               Padding(
                 padding: EdgeInsets.all(sceenWidthInfo / 15),
-                child: Text(
-                  "öğrenciden",
-                  style: TextStyle(
-                      fontSize: sceenWidthInfo / 10, color: Colors.indigo),
+                child: Text("öğrenciden", style: TextStyle(fontSize: sceenWidthInfo / 10, color: Colors.indigo),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(sceenHeightInfo / 40),
+                padding:  EdgeInsets.all(sceenHeightInfo / 40),
                 child: Container(
                   height: sceenHeightInfo / 12,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 1),
+                    border: Border.all(color: Colors.black , width: 1 ),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: DropdownButton<String>(
                     value: selected_school,
-                    items: school.map<DropdownMenuItem<String>>((String value) {
+                    items:school.map<DropdownMenuItem<String>>((String value){
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(
-                          " $value",
-                          style: TextStyle(color: Colors.black, fontSize: 17),
-                        ),
+
+                        child: Text(" $value", style: TextStyle(color:Colors.black, fontSize: 17),),
                       );
                     }).toList(),
-                    icon: Icon(
-                      Icons.arrow_drop_down,
-                    ),
+                    icon: Icon(Icons.arrow_drop_down,),
                     iconSize: 26,
                     isExpanded: true,
                     underline: SizedBox(),
-                    onChanged: (String? selected_data) {
+                    onChanged: (String? selected_data){
                       setState(() {
-                        selected_school = selected_data!;
+                        selected_school= selected_data!;
                       });
                     },
                   ),
@@ -101,7 +94,7 @@ class _signupState extends State<signup> {
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
+                            BorderRadius.all(Radius.circular(10.0)),
                           ),
                           labelText: "Email",
                           labelStyle: TextStyle(
@@ -135,7 +128,7 @@ class _signupState extends State<signup> {
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
+                            BorderRadius.all(Radius.circular(10.0)),
                           ),
                           labelText: "Şifre",
                           labelStyle: TextStyle(
@@ -169,7 +162,7 @@ class _signupState extends State<signup> {
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
+                            BorderRadius.all(Radius.circular(10.0)),
                           ),
                           labelText: "Şifrenizi Tekrar Giriniz",
                           labelStyle: TextStyle(
@@ -208,13 +201,13 @@ class _signupState extends State<signup> {
                             //elevation: 20,
                             shape: const RoundedRectangleBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                              BorderRadius.all(Radius.circular(10)),
                               side: BorderSide(color: Colors.white),
                             ),
                           ),
                           onPressed: () {
                             bool controlResult =
-                                formKey.currentState!.validate();
+                            formKey.currentState!.validate();
                             if (controlResult) {}
                           },
                         ),
@@ -236,10 +229,7 @@ class _signupState extends State<signup> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const login()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const login()));
                               },
                               child: Text(
                                 "Giriş yap.",

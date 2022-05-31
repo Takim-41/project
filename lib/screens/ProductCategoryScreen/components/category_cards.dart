@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/TempDatabase/tempUniversities.dart';
+import 'package:ogrenciden/TempDatabase/tempCatagories.dart';
 import 'package:ogrenciden/core/size_config.dart';
 
-class UniCategoryCards extends StatelessWidget {
-  final TempUniversities uni_categories;
+class CategoryCards extends StatelessWidget {
+  final TempCategories categories;
   final GestureTapCallback press;
-  const UniCategoryCards(
-      {Key? key, required this.uni_categories, required this.press})
+  const CategoryCards({Key? key, required this.categories, required this.press})
       : super(key: key);
 
   //final int numOfBrands;
@@ -25,7 +24,7 @@ class UniCategoryCards extends StatelessWidget {
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Stack(children: [
-                        Image.asset(uni_categories.image, //image,
+                        Image.asset(categories.image, //image,
                             fit: BoxFit.cover),
                         Container(
                           //padding: EdgeInsets.symmetric(vertical: getProportionateScreenWidth(10)),
@@ -45,7 +44,7 @@ class UniCategoryCards extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                               children: [
                                 TextSpan(
-                                    text: uni_categories.name, //"$unis",
+                                    text: categories.title, //"$unis",
                                     style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize:

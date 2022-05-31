@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-<<<<<<<< HEAD:lib/LoginScreens/loginScreen.dart
-import 'package:ogrenciden/LandingScreen/landing.dart';
-import 'package:ogrenciden/LoginScreens/forgetPasswordScreen.dart';
-import 'package:ogrenciden/LoginScreens/signupScreen.dart';
-========
-import 'package:ogrenciden/screens/forgetPasswordScreen.dart';
->>>>>>>> main:lib/screens/login.dart
+import 'package:ogrenciden/screens/LandingScreen/landing.dart';
+import 'package:ogrenciden/screens/LoginScreens/forgetPasswordScreen.dart';
+import 'package:ogrenciden/screens/LoginScreens/signupScreen.dart';
+
 //import 'package:login_signup_screen/login_form.dart';
 
 class login extends StatefulWidget {
@@ -72,13 +69,9 @@ class _loginState extends State<login> {
                             return "Mail adresinizi giriniz";
                           }
 
-<<<<<<<< HEAD:lib/LoginScreens/loginScreen.dart
-                          return tfemail.text.contains("edu.tr") ? null:"Mail adresi edu.tr uzantılı olmalı";
-========
-                          return tfemail.text.contains("@edu.tr")
+                          return tfemail.text.contains("edu.tr")
                               ? null
                               : "Mail adresi edu.tr uzantılı olmalı";
->>>>>>>> main:lib/screens/login.dart
                         },
                       ),
                     ),
@@ -121,13 +114,10 @@ class _loginState extends State<login> {
                           top: 8.0, right: 30.0, left: 20.0, bottom: 8.0),
                       child: GestureDetector(
                         onTap: () {
-<<<<<<<< HEAD:lib/LoginScreens/loginScreen.dart
-========
                           Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const password()));
->>>>>>>> main:lib/screens/login.dart
                         },
                         child: Align(
                           alignment: Alignment.topLeft,
@@ -163,16 +153,12 @@ class _loginState extends State<login> {
                             ),
                           ),
                           onPressed: () {
-<<<<<<<< HEAD:lib/LoginScreens/loginScreen.dart
-                            bool controlResult = formKey.currentState!.validate();
-                            if (controlResult) {
-                              Navigator.pushNamed(context, LandingScreen.routeName);
-                            }
-========
                             bool controlResult =
                                 formKey.currentState!.validate();
-                            if (controlResult) {}
->>>>>>>> main:lib/screens/login.dart
+                            if (controlResult) {
+                              Navigator.pushNamed(
+                                  context, LandingScreen.routeName);
+                            }
                           },
                         ),
                       ),
@@ -192,13 +178,12 @@ class _loginState extends State<login> {
                               ),
                             ),
                             GestureDetector(
-<<<<<<<< HEAD:lib/LoginScreens/loginScreen.dart
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const signup()));
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const signup()));
                               },
-========
-                              onTap: () {},
->>>>>>>> main:lib/screens/login.dart
                               child: Text(
                                 "Hemen üye ol.",
                                 style: TextStyle(

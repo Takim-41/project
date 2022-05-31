@@ -1,86 +1,40 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
+import 'package:ogrenciden/screens/LandingScreen/landing.dart';
+import 'package:ogrenciden/screens/LoginScreens/forgetPasswordScreen.dart';
+import 'package:ogrenciden/screens/LoginScreens/signupScreen.dart';
+//import 'package:login_signup_screen/login_form.dart';
 
-class signup extends StatefulWidget {
+class login extends StatefulWidget {
   static String routeName = "/LoginScreens";
-  const signup({Key? key}) : super(key: key);
+  const login({Key? key}) : super(key: key);
 
   @override
-  State<signup> createState() => _signupState();
+  State<login> createState() => _loginState();
 }
 
-class _signupState extends State<signup> {
-  //DropDownButton için gerekli liste ve  yapılan seçim
-  var school = <String>[];
-  String selected_school = "Okulunuz";
-
-  //TextformField için;
+class _loginState extends State<login> {
   var formKey = GlobalKey<FormState>();
+
   var tfemail = TextEditingController();
   var tfpassword = TextEditingController();
-  var tfpassword_again = TextEditingController();
-  @override
-  void initState() {
-    super.initState();
-    school.add("Okulunuz");
-    school.add("Akdeniz Üniversitesi");
-    school.add("Boğaziçi Üniversitesi");
-    school.add("Ege Üniversitesi");
-    school.add("İstanbul Üniversitesi");
-    school.add("Selçuk Üniversitesi");
-  }
 
+  @override
   Widget build(BuildContext context) {
     var sceenInfo = MediaQuery.of(context);
     final double sceenWidthInfo = sceenInfo.size.width;
     final double sceenHeightInfo = sceenInfo.size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.all(sceenWidthInfo / 15),
+                padding: EdgeInsets.all(sceenWidthInfo / 25),
                 child: Text(
                   "öğrenciden",
                   style: TextStyle(
                       fontSize: sceenWidthInfo / 10, color: Colors.indigo),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(sceenHeightInfo / 40),
-                child: Container(
-                  height: sceenHeightInfo / 12,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: DropdownButton<String>(
-                    value: selected_school,
-                    items: school.map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          " $value",
-                          style: TextStyle(color: Colors.black, fontSize: 17),
-                        ),
-                      );
-                    }).toList(),
-                    icon: Icon(
-                      Icons.arrow_drop_down,
-                    ),
-                    iconSize: 26,
-                    isExpanded: true,
-                    underline: SizedBox(),
-                    onChanged: (String? selected_data) {
-                      setState(() {
-                        selected_school = selected_data!;
-                      });
-                    },
-                  ),
                 ),
               ),
               Form(
@@ -155,50 +109,35 @@ class _signupState extends State<signup> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(sceenHeightInfo / 40),
-                      child: TextFormField(
-                        controller: tfpassword_again,
-                        obscureText: true,
-                        decoration: const InputDecoration(
-                          hintText: "Şifrenizi Tekrar Giriniz",
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 17,
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
-                          ),
-                          labelText: "Şifrenizi Tekrar Giriniz",
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 17,
+                      padding: const EdgeInsets.only(
+                          top: 8.0, right: 30.0, left: 20.0, bottom: 8.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const password()));
+                        },
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "Şifremi unuttum.",
+                            style: TextStyle(
+                              color: Colors.indigo,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sceenWidthInfo / 30,
+                            ),
                           ),
                         ),
-                        validator: (tfinput) {
-                          if (tfinput!.isEmpty) {
-                            return "Şifrenizi  giriniz";
-                          }
-                          if (tfinput.length < 8) {
-                            return "Şifreniz en az 8 haneli olmalıdır";
-                          }
-                          if (tfpassword.text != tfpassword_again.text) {
-                            return "Şifreler uyuşmuyor";
-                          }
-
-                          return null;
-                        },
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(sceenHeightInfo / 40),
                       child: SizedBox(
-                        width: sceenWidthInfo / 1,
+                        width: sceenWidthInfo / 1.1,
                         height: sceenHeightInfo / 12,
                         child: ElevatedButton(
-                          child: Text("KAYIT OL",
+                          child: Text("GİRİŞ YAP",
                               style: TextStyle(
                                   fontSize: sceenWidthInfo / 25,
                                   color: Colors.white)),
@@ -215,7 +154,10 @@ class _signupState extends State<signup> {
                           onPressed: () {
                             bool controlResult =
                                 formKey.currentState!.validate();
-                            if (controlResult) {}
+                            if (controlResult) {
+                              Navigator.pushNamed(
+                                  context, LandingScreen.routeName);
+                            }
                           },
                         ),
                       ),
@@ -227,7 +169,7 @@ class _signupState extends State<signup> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Zaten bir hesabın var mı?",
+                              "Henüz üye değil misin?",
                               style: TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
@@ -239,10 +181,10 @@ class _signupState extends State<signup> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const login()));
+                                        builder: (context) => const signup()));
                               },
                               child: Text(
-                                "Giriş yap.",
+                                "Hemen üye ol.",
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,

@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/ogrenciden_appbar/widgets/OgrencidenAppBar.dart
 import 'package:flutter_svg/svg.dart';
-import '../../FavScreen/favorites.dart';
-import '../../LandingScreen/landing.dart';
-import '../../enums.dart';
-
-=======
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ogrenciden/widgets/landing/body.dart';
 import 'package:ogrenciden/core/enums.dart';
-import 'package:ogrenciden/core/size_config.dart';
->>>>>>> main:lib/Widgets/OgrencidenAppBar.dart
+import 'package:ogrenciden/screens/FavScreen/favorites.dart';
+import 'package:ogrenciden/screens/LandingScreen/landing.dart';
 
 class CusBottomNavigationBar extends StatelessWidget {
-  const CusBottomNavigationBar({
-    Key? key,
-    required this.selectedMenu
-  }) : super(key: key);
+  const CusBottomNavigationBar({Key? key, required this.selectedMenu})
+      : super(key: key);
 
   final MenuState selectedMenu;
   static const Color kPrimaryColor = Color(0xFFAAFF00);
@@ -24,21 +14,18 @@ class CusBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color inActiveIconColor = Color(0xFFB6B6B6);
     return Container(
-        padding: EdgeInsets.symmetric(vertical:12),
+        padding: EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40)
-            ),
+                topLeft: Radius.circular(40), topRight: Radius.circular(40)),
             boxShadow: [
               BoxShadow(
-                offset: Offset(0,-15),
+                offset: Offset(0, -15),
                 blurRadius: 20,
                 color: Color(0xFFDADADA).withOpacity(0.15),
               )
-            ]
-        ),
+            ]),
         child: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -46,30 +33,34 @@ class CusBottomNavigationBar extends StatelessWidget {
               IconButton(
                   icon: SvgPicture.asset("assets/icons/burger.svg",
                       color: MenuState.home == selectedMenu
-                          ?kPrimaryColor: inActiveIconColor),
-                  onPressed: () => Navigator.pushNamed(context, LandingScreen.routeName)
-              ),
+                          ? kPrimaryColor
+                          : inActiveIconColor),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, LandingScreen.routeName)),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/chat.svg",
                     color: MenuState.message == selectedMenu
-                        ?kPrimaryColor: inActiveIconColor),
+                        ? kPrimaryColor
+                        : inActiveIconColor),
                 onPressed: () {},
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/heart.svg",
                     color: MenuState.favourite == selectedMenu
-                        ?kPrimaryColor: inActiveIconColor),
-                onPressed: () => Navigator.pushNamed(context, FavScreen.routeName),
+                        ? kPrimaryColor
+                        : inActiveIconColor),
+                onPressed: () =>
+                    Navigator.pushNamed(context, FavScreen.routeName),
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/user.svg",
                     color: MenuState.profile == selectedMenu
-                        ?kPrimaryColor: inActiveIconColor),
+                        ? kPrimaryColor
+                        : inActiveIconColor),
                 onPressed: () {},
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 }

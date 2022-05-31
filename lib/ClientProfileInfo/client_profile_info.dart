@@ -2,9 +2,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-
-import '../enums.dart';
-import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
+import 'package:ogrenciden/Widgets/OgrencidenAppBar.dart';
+import 'package:ogrenciden/core/enums.dart';
 
 class ClientProfileInfo extends StatefulWidget {
   static String routeName = "/ClientProfileInfo";
@@ -41,7 +40,7 @@ class _ClientProfileInfoState extends State<ClientProfileInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home),
+      bottomNavigationBar: CusBottomNavigationBar(selectedMenu: MenuState.home),
       appBar: AppBar(
         title: const Text('Profile Info'),
         backgroundColor: Colors.green,
@@ -76,12 +75,12 @@ class _ClientProfileInfoState extends State<ClientProfileInfo> {
             child: Container(
               child: const Center(
                   child: Text(
-                    "Name Surname",
-                    style: TextStyle(
-                        color: Colors.orange,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17),
-                  )),
+                "Name Surname",
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17),
+              )),
             ),
           ),
           const SizedBox(
