@@ -8,7 +8,6 @@ class LandingScreen extends StatelessWidget {
   static String routeName = "/LandingScreen";
   const LandingScreen({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

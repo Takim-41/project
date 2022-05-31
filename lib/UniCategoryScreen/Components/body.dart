@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ogrenciden/UniCategoryScreen/Components/uni_cards.dart';
 
 import '../../LandingScreen/landing.dart';
+import '../../ListProductScreen/list_product.dart';
 import '../../size_config.dart';
 
 import 'package:ogrenciden/TempDatabase/tempUniversities.dart';
@@ -46,7 +47,7 @@ class Body extends StatelessWidget {
                 SizedBox(height:15),
                 Expanded(child: ListView.builder(
                     itemCount: uni_categories.length,
-                    itemBuilder: (context, index) => UniCategoryCards(uni_categories: uni_categories[index], press: (){}))
+                    itemBuilder: (context, index) => UniCategoryCards(uni_categories: uni_categories[index], press: () => Navigator.pushNamed(context, ListScreen.routeName)))
                 )
               ],
             )

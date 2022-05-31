@@ -56,54 +56,57 @@ class CategoryCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: getProportionateScreenWidth(10)),
-      child: SizedBox(
-          width: SizeConfig.screenWidth * 0.9,
-          height: getProportionateScreenHeight(90),
-          child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Stack(
-                  children: [
-                    Image.asset(
-                        image,
-                        fit: BoxFit.cover
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFF343434).withOpacity(0.5),
-                              Color(0xFF343434).withOpacity(0.1)
-                            ],
-                          )
+    return GestureDetector(
+      onTap: press,
+      child: Padding(
+        padding: EdgeInsets.only(left: getProportionateScreenWidth(10)),
+        child: SizedBox(
+            width: SizeConfig.screenWidth * 0.9,
+            height: getProportionateScreenHeight(90),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                    children: [
+                      Image.asset(
+                          image,
+                          fit: BoxFit.cover
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: getProportionateScreenWidth(10),
-                          vertical: getProportionateScreenHeight(10)
+                      Container(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF343434).withOpacity(0.5),
+                                Color(0xFF343434).withOpacity(0.1)
+                              ],
+                            )
+                        ),
                       ),
-                      child: Text.rich(
-                          TextSpan(
-                              style: TextStyle(color: Colors.white),
-                              children:[
-                                TextSpan(
-                                    text: "$unis",
-                                    style: TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontSize: getProportionateScreenWidth(25),
-                                        fontWeight: FontWeight.bold
-                                    )
-                                )
-                                // TextSpan(text: " # products included") At the end can be added how many product is listed in this uni.
-                              ]
-                          )
-                      ),
-                    )
-                  ]
-              )
-          )
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: getProportionateScreenWidth(10),
+                            vertical: getProportionateScreenHeight(10)
+                        ),
+                        child: Text.rich(
+                            TextSpan(
+                                style: TextStyle(color: Colors.white),
+                                children:[
+                                  TextSpan(
+                                      text: "$unis",
+                                      style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: getProportionateScreenWidth(25),
+                                          fontWeight: FontWeight.bold
+                                      )
+                                  )
+                                  // TextSpan(text: " # products included") At the end can be added how many product is listed in this uni.
+                                ]
+                            )
+                        ),
+                      )
+                    ]
+                )
+            )
+        ),
       ),
     );
   }
