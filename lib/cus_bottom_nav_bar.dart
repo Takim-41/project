@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'LandingScreen/landing.dart';
 import 'enums.dart';
 
 class CusBottomNavigationBar extends StatelessWidget {
@@ -37,7 +38,7 @@ class CusBottomNavigationBar extends StatelessWidget {
                   icon: SvgPicture.asset("assets/icons/burger.svg",
                       color: MenuState.home == selectedMenu
                           ?kPrimaryColor: inActiveIconColor),
-                  onPressed: () {}//=> Navigator.pushNamed(context, LandingScreen.routeName)
+                  onPressed: () => Navigator.pushNamed(context, LandingScreen.routeName)
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/chat.svg",
