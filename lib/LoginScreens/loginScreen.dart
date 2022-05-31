@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/forgetPasswordScreen.dart';
+import 'package:ogrenciden/LandingScreen/landing.dart';
+import 'package:ogrenciden/LoginScreens/forgetPasswordScreen.dart';
+import 'package:ogrenciden/LoginScreens/signupScreen.dart';
 //import 'package:login_signup_screen/login_form.dart';
 
 class login extends StatefulWidget {
+  static String routeName = "/LoginScreens";
   const login({Key? key}) : super(key: key);
 
 
@@ -107,7 +110,6 @@ class _loginState extends State<login> {
                       padding: const EdgeInsets.only(top: 8.0, right: 30.0, left: 20.0, bottom: 8.0),
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const password()));
                         },
                         child: Align(
                           alignment: Alignment.topLeft,
@@ -147,7 +149,7 @@ class _loginState extends State<login> {
                           onPressed: () {
                             bool controlResult = formKey.currentState!.validate();
                             if (controlResult) {
-
+                              Navigator.pushNamed(context, LandingScreen.routeName);
                             }
                           },
 
@@ -172,7 +174,7 @@ class _loginState extends State<login> {
                             ),
                             GestureDetector(
                               onTap: (){
-
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const signup()));
                               },
                               child: Text(
                                 "Hemen üye ol.",

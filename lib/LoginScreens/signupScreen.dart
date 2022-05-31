@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'loginScreen.dart';
+
 class signup extends StatefulWidget {
+  static String routeName = "/LoginScreens";
   const signup({Key? key}) : super(key: key);
 
   @override
@@ -225,7 +228,9 @@ class _signupState extends State<signup> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const login()));
+                              },
                               child: Text(
                                 "Giriş yap.",
                                 style: TextStyle(

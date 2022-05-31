@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/LandingScreen/landing.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
 import 'package:ogrenciden/ProductCategoryScreen/prod_category.dart';
 import 'package:ogrenciden/routs.dart';
-import 'package:ogrenciden/signupScreen.dart';
+import 'package:ogrenciden/LoginScreens/signupScreen.dart';
 
-import 'ProductInfoScreen/product_info_page.dart';
-import 'ClientProfileInfo/client_profile_info.dart';
-import 'ListProductScreen/list_product.dart';
-import 'Trial.dart';
-import 'forgetPasswordScreen.dart';
-import 'loginScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,9 +22,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LandingScreen(),
+      //home: LandingScreen(),
         //home: MyHomePage(title: 'trial'),
-        //home: ProductInfoPage(),
+        home: login(),
       routes:routes
     );
   }

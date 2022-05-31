@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
 
 class password extends StatefulWidget {
+  static String routeName = "/LoginScreens";
   const password({Key? key}) : super(key: key);
 
   @override
@@ -88,6 +90,7 @@ class _passwordState extends State<password> {
                     bool controlResult= formKey.currentState!.validate();
                     if(controlResult){
                       //Şifreyi yenileme
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const login()));
                     }
                   },
 
