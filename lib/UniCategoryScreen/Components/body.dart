@@ -4,6 +4,7 @@ import 'package:ogrenciden/UniCategoryScreen/Components/uni_cards.dart';
 
 import '../../LandingScreen/landing.dart';
 import '../../ListProductScreen/list_product.dart';
+import '../../TempDatabase/tempProducts.dart';
 import '../../size_config.dart';
 
 import 'package:ogrenciden/TempDatabase/tempUniversities.dart';
@@ -47,7 +48,21 @@ class Body extends StatelessWidget {
                 SizedBox(height:15),
                 Expanded(child: ListView.builder(
                     itemCount: uni_categories.length,
-                    itemBuilder: (context, index) => UniCategoryCards(uni_categories: uni_categories[index], press: () => Navigator.pushNamed(context, ListScreen.routeName)))
+                    itemBuilder: (context, index) => UniCategoryCards(uni_categories: uni_categories[index],
+                        press: () {
+                          List<TempProduct> _searchProduct = [] ;
+                          product.forEach((p) {
+                            if (p.university ==  uni_categories[index].name) {
+                              _searchProduct.add(p);
+                            }
+                          });
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ListScreen(product: _searchProduct),
+                            ),
+                          );
+                        }))
                 )
               ],
             )

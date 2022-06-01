@@ -23,7 +23,7 @@ final Map<String, WidgetBuilder> routes = {
   CategoryScreen.routeName: (context) => CategoryScreen(),
 <<<<<<< HEAD:lib/routs.dart
   UniversityScreen.routeName: (context) => UniversityScreen(),
-  ListScreen.routeName: (context) => ListScreen(),
+  ListScreen.routeName: (context) => ListScreen(product: [],),
   ProductInfoPage.routeName: (context) => ProductInfoPage(),
   ClientProfileInfo.routeName: (context) => ClientProfileInfo(),
   FavScreen.routeName: (context) => FavScreen(),

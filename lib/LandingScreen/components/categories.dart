@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../ListProductScreen/list_product.dart';
 
+import '../../TempDatabase/tempProducts.dart';
 import '../../size_config.dart';
 
 class Categories extends StatelessWidget {
@@ -19,19 +20,58 @@ class Categories extends StatelessWidget {
               CategoryCards(
                   image: "assets/images/books.png",
                   unis: "books",
-                  press: () => Navigator.pushNamed(context, ListScreen.routeName)
+                  press: () {
+                    List<TempProduct> _searchProduct = [] ;
+                    product.forEach((p) {
+                      if (p.category == "Books" ) {
+                        _searchProduct.add(p);
+                      }
+                    });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListScreen(product: _searchProduct),
+                      ),
+                    );
+                  }
               ),
               SizedBox(height:10),
               CategoryCards(
                   image: "assets/images/electronics.png",
                   unis: "electronics",
-                  press: () => Navigator.pushNamed(context, ListScreen.routeName)
+                  press: () {
+                    List<TempProduct> _searchProduct = [] ;
+                    product.forEach((p) {
+                      if (p.category == "Electronics" ) {
+                        _searchProduct.add(p);
+                      }
+                    });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListScreen(product: _searchProduct),
+                      ),
+                    );
+                  }
               ),
               SizedBox(height:10),
               CategoryCards(
                   image: "assets/images/notes.png",
                   unis: "notes",
-                  press: () => Navigator.pushNamed(context, ListScreen.routeName)
+                  press: () {
+                    List<TempProduct> _searchProduct = [] ;
+                    product.forEach((p) {
+                      if (p.category == "Notes" ) {
+                        _searchProduct.add(p);
+                      }
+                    });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListScreen(product: _searchProduct),
+                      ),
+                    );
+                  }
               ),
             ],
           ),

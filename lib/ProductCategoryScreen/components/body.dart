@@ -5,6 +5,7 @@ import 'package:ogrenciden/ProductCategoryScreen/components/category_cards.dart'
 import '../../LandingScreen/landing.dart';
 import 'package:ogrenciden/TempDatabase/tempCatagories.dart';
 import '../../ListProductScreen/list_product.dart';
+import '../../TempDatabase/tempProducts.dart';
 import '../../size_config.dart';
 
 class Body extends StatelessWidget {
@@ -46,7 +47,21 @@ class Body extends StatelessWidget {
               SizedBox(height:15),
               Expanded(child: ListView.builder(
                   itemCount: categories.length,
-                  itemBuilder: (context, index) => CategoryCards(categories: categories[index], press: () => Navigator.pushNamed(context, ListScreen.routeName)))
+                  itemBuilder: (context, index) => CategoryCards(categories: categories[index],
+                      press: () {
+                        List<TempProduct> _searchProduct = [] ;
+                        product.forEach((p) {
+                          if (p.category == categories[index].title) {
+                            _searchProduct.add(p);
+                          }
+                        });
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ListScreen(product: _searchProduct),
+                          ),
+                        );
+                      }))
               )
 
               /*CategoryCards(

@@ -27,6 +27,6 @@ List<TempUniversities> uni_categories =[
   ),
   TempUniversities(
     image: "assets/images/itu_logo.png",
-    name: "İstanbul Technic University"
+    name: "ITU"
   )
 ];
