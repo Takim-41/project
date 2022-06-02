@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/Widgets/OgrencidenAppBar.dart';
-import 'package:ogrenciden/core/enums.dart';
-import 'package:ogrenciden/core/size_config.dart';
+import 'package:ogrenciden/TempDatabase/tempProducts.dart';
+
+
+import '../../Widgets/OgrencidenAppBar.dart';
+import '../../core/enums.dart';
+import '../../core/size_config.dart';
 import 'components/body.dart';
 
 class ListScreen extends StatelessWidget {
-  const ListScreen({Key? key}) : super(key: key);
+  const ListScreen({Key? key, required this.product});
+  final List<TempProduct> product;
+
   static String routeName = "/ListProductScreen";
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-        body: Body(),
-        bottomNavigationBar:
-            CusBottomNavigationBar(selectedMenu: MenuState.home));
+        body: Body(product: product),
+        bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home)
+    );
+
   }
 }

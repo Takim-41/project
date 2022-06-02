@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
 
 class password extends StatefulWidget {
   static String routeName = "/LoginScreens";
@@ -18,16 +18,18 @@ class _passwordState extends State<password> {
     final double sceenWidthInfo = sceenInfo.size.width;
     final double sceenHeihtInfo = sceenInfo.size.height;
     return Scaffold(
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.all(sceenHeihtInfo / 25),
-              child: Text(
-                "öğrenciden",
+              padding:  EdgeInsets.all(sceenHeihtInfo/25),
+              child: Text("öğrenciden",
                 style: TextStyle(
-                    fontSize: sceenWidthInfo / 10, color: Colors.indigo),
+                    fontSize: sceenWidthInfo/10,
+                    color: Colors.indigo
+                ),
               ),
             ),
             Form(
@@ -35,10 +37,10 @@ class _passwordState extends State<password> {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(sceenHeihtInfo / 40),
+                    padding:  EdgeInsets.all(sceenHeihtInfo/40),
                     child: TextFormField(
                       controller: tfemail,
-                      decoration: const InputDecoration(
+                      decoration:  const InputDecoration(
                         hintText: "Öğrenci mail adresinizi giriniz",
                         hintStyle: TextStyle(
                           color: Colors.grey,
@@ -48,6 +50,7 @@ class _passwordState extends State<password> {
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
+
                         ),
                         labelText: "Öğrenci mail adresinizi giriniz",
                         labelStyle: TextStyle(
@@ -59,9 +62,7 @@ class _passwordState extends State<password> {
                         if (tfinput!.isEmpty) {
                           return "Öğrenci Mail adresinizi giriniz";
                         }
-                        return tfemail.text.contains("edu.tr")
-                            ? null
-                            : "Mail adresi edu.tr uzantılı olmalı";
+                        return tfemail.text.contains("edu.tr") ? null:"Mail adresi edu.tr uzantılı olmalı";
                       },
                     ),
                   ),
@@ -71,12 +72,11 @@ class _passwordState extends State<password> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                width: sceenWidthInfo / 1.1,
-                height: sceenHeihtInfo / 12,
+                width: sceenWidthInfo/1.1,
+                height: sceenHeihtInfo/12,
                 child: ElevatedButton(
-                  child: Text("Şifremi sıfırla",
-                      style: TextStyle(
-                          fontSize: sceenWidthInfo / 23, color: Colors.white)),
+                  child: Text("Şifremi sıfırla", style: TextStyle(
+                      fontSize: sceenWidthInfo / 23, color: Colors.white)),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.indigo,
                     //shadowColor: Colors.lightGreen,
@@ -87,15 +87,13 @@ class _passwordState extends State<password> {
                     ),
                   ),
                   onPressed: () {
-                    bool controlResult = formKey.currentState!.validate();
-                    if (controlResult) {
+                    bool controlResult= formKey.currentState!.validate();
+                    if(controlResult){
                       //Şifreyi yenileme
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const login()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const login()));
                     }
                   },
+
                 ),
               ),
             ),

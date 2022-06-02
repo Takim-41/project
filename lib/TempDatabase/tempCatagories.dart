@@ -15,10 +15,10 @@ List<TempCategories> categories =[
   ),
   TempCategories(
       image: "assets/images/electronics.png",
-      title: "electronics"
+      title: "Electronics"
   ),
   TempCategories(
       image: "assets/images/notes.png",
-      title: "notes"
+      title: "Notes"
   )
 ];

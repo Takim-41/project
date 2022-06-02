@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 
 import 'package:ogrenciden/ClientProfileInfo/client_profile_info.dart';
 
-import '../enums.dart';
-import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
+import '../Widgets/OgrencidenAppBar.dart';
+import '../core/enums.dart';
+
+
 
 String imagePath = "assets/images/";
 

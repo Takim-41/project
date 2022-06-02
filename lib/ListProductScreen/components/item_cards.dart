@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../size_config.dart';
+import '../../core/size_config.dart';
 import '../../TempDatabase/tempProducts.dart';
 
 class ItemCard extends StatelessWidget {

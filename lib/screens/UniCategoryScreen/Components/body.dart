@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ogrenciden/UniCategoryScreen/Components/uni_cards.dart';
 
+import '../../../TempDatabase/tempProducts.dart';
+import '../../../core/size_config.dart';
 import '../../LandingScreen/landing.dart';
 import '../../ListProductScreen/list_product.dart';
-import '../../TempDatabase/tempProducts.dart';
 
 
 import 'package:ogrenciden/TempDatabase/tempUniversities.dart';
-
-import '../../core/size_config.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);

@@ -22,11 +22,11 @@ List<TempUniversities> uni_categories =[
     name: "METU",
   ),
   TempUniversities(
-      image: "assets/images/metu_logo.png",
-      name: "Selçuk University",
+    image: "assets/images/metu_logo.png",
+    name: "Selçuk University",
   ),
   TempUniversities(
-    image: "assets/images/itu_logo.png",
-    name: "İstanbul Technic University"
+      image: "assets/images/itu_logo.png",
+      name: "ITU"
   )
 ];

@@ -6,7 +6,7 @@ import 'package:multi_select_flutter/chip_display/multi_select_chip_display.dart
 import 'package:multi_select_flutter/util/multi_select_item.dart';
 import 'package:multi_select_flutter/util/multi_select_list_type.dart';
 
-import '../../size_config.dart';
+import '../../core/size_config.dart';
 import '../../TempDatabase/tempProducts.dart';
 
 

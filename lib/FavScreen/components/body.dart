@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../../ListProductScreen/components/item_cards.dart';
 import '../../ProductInfoScreen/product_info_page.dart';
 import '../../TempDatabase/tempProducts.dart';
-import '../../size_config.dart';
+import '../../core/size_config.dart';
+
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);

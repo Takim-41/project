@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../enums.dart';
-import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
-import '../size_config.dart';
+import '../Widgets/OgrencidenAppBar.dart';
+import '../core/enums.dart';
+import '../core/size_config.dart';
 import 'components/body.dart';
 
 class FavScreen extends StatelessWidget {
