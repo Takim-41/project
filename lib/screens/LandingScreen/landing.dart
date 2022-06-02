@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/Widgets/OgrencidenAppBar.dart';
-import 'package:ogrenciden/core/enums.dart';
-import 'package:ogrenciden/core/size_config.dart';
-import 'package:ogrenciden/screens/LandingScreen/components/body.dart';
+import 'package:ogrenciden/LandingScreen/components/body.dart';
+
+import '../../Widgets/OgrencidenAppBar.dart';
+import '../../core/enums.dart';
+import '../../core/size_config.dart';
+
+
+
 
 class LandingScreen extends StatelessWidget {
   static String routeName = "/LandingScreen";
@@ -12,8 +16,10 @@ class LandingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-        body: Body(),
-        bottomNavigationBar:
-            CusBottomNavigationBar(selectedMenu: MenuState.home));
+      body: Body(),
+      bottomNavigationBar: CusBottomNavigationBar(selectedMenu:MenuState.home)
+    );
   }
 }
+
+

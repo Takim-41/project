@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/LandingScreen/landing.dart';
-import 'package:ogrenciden/screens/LoginScreens/forgetPasswordScreen.dart';
-import 'package:ogrenciden/screens/LoginScreens/signupScreen.dart';
+
+import 'package:ogrenciden/LandingScreen/landing.dart';
+import 'package:ogrenciden/LoginScreens/forgetPasswordScreen.dart';
+
+import '../../LoginScreens/signupScreen.dart';
+
+
 //import 'package:login_signup_screen/login_form.dart';
 
 class login extends StatefulWidget {
@@ -68,9 +72,8 @@ class _loginState extends State<login> {
                             return "Mail adresinizi giriniz";
                           }
 
-                          return tfemail.text.contains("edu.tr")
-                              ? null
-                              : "Mail adresi edu.tr uzantılı olmalı";
+                          return tfemail.text.contains("edu.tr") ? null:"Mail adresi edu.tr uzantılı olmalı";
+
                         },
                       ),
                     ),
@@ -152,11 +155,9 @@ class _loginState extends State<login> {
                             ),
                           ),
                           onPressed: () {
-                            bool controlResult =
-                                formKey.currentState!.validate();
+                            bool controlResult = formKey.currentState!.validate();
                             if (controlResult) {
-                              Navigator.pushNamed(
-                                  context, LandingScreen.routeName);
+                              Navigator.pushNamed(context, LandingScreen.routeName);
                             }
                           },
                         ),
@@ -177,12 +178,10 @@ class _loginState extends State<login> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const signup()));
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const signup()));
                               },
+
                               child: Text(
                                 "Hemen üye ol.",
                                 style: TextStyle(

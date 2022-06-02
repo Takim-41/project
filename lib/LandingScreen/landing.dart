@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/LandingScreen/components/body.dart';
-import 'package:ogrenciden/enums.dart';
-import 'package:ogrenciden/size_config.dart';
 
-import '../ogrenciden_appbar/widgets/OgrencidenAppBar.dart';
+import '../Widgets/OgrencidenAppBar.dart';
+import '../core/enums.dart';
+import '../core/size_config.dart';
+
+
 
 
 class LandingScreen extends StatelessWidget {

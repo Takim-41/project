@@ -1,13 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/LandingScreen/components/search_bar.dart';
-import 'package:ogrenciden/LandingScreen/components/heading.dart';
-import 'package:ogrenciden/LandingScreen/components/universities.dart';
-import 'package:ogrenciden/UniCategoryScreen/uni_catagory.dart';
+import 'package:ogrenciden/screens/uni_catagory.dart';
 
-import '../../ProductCategoryScreen/prod_category.dart';
-import 'app_name.dart';
-import 'categories.dart';
+import '../../Widgets/landing/heading.dart';
+import '../../Widgets/landing/search_bar.dart';
+import '../../screens/LandingScreen/components/categories.dart';
+import '../../screens/LandingScreen/components/universities.dart';
+import '../../screens/prod_category.dart';
+
+import '../../widgets/landing/app_name.dart';
+
 
 
 class Body extends StatelessWidget {

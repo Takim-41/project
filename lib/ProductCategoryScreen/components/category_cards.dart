@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../TempDatabase/tempCatagories.dart';
-import '../../size_config.dart';
-
+import '../../core/size_config.dart';
 
 
 class CategoryCards extends StatelessWidget {

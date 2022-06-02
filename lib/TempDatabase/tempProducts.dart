@@ -20,13 +20,13 @@ class TempProduct{
 List<TempProduct> product =[
   TempProduct(
       id: 1,
-      title:"Math 102 Books",
+      title:"Basys3",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
       price: 200,
-      category: "Books",
-      university: "Bilkent"
+      category: "Electronics",
+      university: "METU"
   ),
   TempProduct(
       id: 2,
@@ -36,27 +36,27 @@ List<TempProduct> product =[
       image: "assets/images/bilkent_logo.png",
       price: 120,
       category: "Books",
-      university: "Bilkent"
+      university: "Bilkent University"
   ),
   TempProduct(
       id: 3,
-      title:"Temp 102 Books",
+      title:"Temp 102 Notes",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
       price: 500,
-      category: "Books",
-      university: "Bilkent"
+      category: "Notes",
+      university: "METU"
   ),
   TempProduct(
       id: 4,
-      title:"Chem 102 Books",
+      title:"Chem 102 Notes",
       description: "Clear and fair price.",
       owner: "Kemal",
       image: "assets/images/bilkent_logo.png",
       price: 50,
-      category: "Books",
-      university: "Bilkent"
+      category: "Notes",
+      university: "Bilkent University"
   ),
   TempProduct(
       id: 5,
@@ -66,6 +66,6 @@ List<TempProduct> product =[
       image: "assets/images/bilkent_logo.png",
       price: 170,
       category: "Books",
-      university: "Bilkent"
+      university: "ITU"
   )
 ];
