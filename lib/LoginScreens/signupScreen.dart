@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'loginScreen.dart';
@@ -55,6 +55,9 @@ class _signupState extends State<signup> {
                     border: Border.all(color: Colors.black , width: 1 ),
                     borderRadius: BorderRadius.circular(10),
                   ),
+
+
+
                   child: DropdownButton<String>(
                     value: selected_school,
                     items:school.map<DropdownMenuItem<String>>((String value){
@@ -74,6 +77,11 @@ class _signupState extends State<signup> {
                       });
                     },
                   ),
+
+
+
+
+
                 ),
               ),
               Form(
