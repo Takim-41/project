@@ -1,14 +1,23 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'package:ogrenciden/ClientProfileInfo/text_bar.dart';
 import 'package:ogrenciden/Widgets/OgrencidenAppBar.dart';
 import 'package:ogrenciden/core/enums.dart';
 
 class ClientProfileInfo extends StatefulWidget {
   static String routeName = "/ClientProfileInfo";
   final String? eposta;
-  ClientProfileInfo({Key? key, this.eposta}) : super(key: key);
+  const ClientProfileInfo({
+    Key? key,
+    this.eposta,
+  }) : super(key: key);
 
   @override
   _ClientProfileInfoState createState() => _ClientProfileInfoState();
@@ -40,25 +49,12 @@ class _ClientProfileInfoState extends State<ClientProfileInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CusBottomNavigationBar(selectedMenu: MenuState.home),
-      appBar: AppBar(
-        title: const Text('Profile Info'),
-        backgroundColor: Colors.green,
-        leading: BackButton(
-          color: Colors.black,
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-      ),
-      backgroundColor: const Color(0xff1C2031),
+      bottomNavigationBar:
+          const CusBottomNavigationBar(selectedMenu: MenuState.home),
       body: ListView(
         children: [
-          const SizedBox(
-            height: 50,
-          ),
           Padding(
-            padding: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 70),
             child: Container(
               decoration: const BoxDecoration(),
               child: CircleAvatar(
@@ -67,118 +63,44 @@ class _ClientProfileInfoState extends State<ClientProfileInfo> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 50,
-          ),
           Padding(
             padding: const EdgeInsets.only(top: 5),
-            child: Container(
-              child: const Center(
-                  child: Text(
-                "Name Surname",
-                style: TextStyle(
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17),
-              )),
+            child: Center(
+                child: Text(
+              "john Doe",
+              style: GoogleFonts.poppins(
+                  color: const Color(0xFF212121),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17),
+            )),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 15),
+            child: text_bar(
+              title: "Phone Number",
+              text: "05555555555",
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Row(
-                  children: const [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "Information",
-                        style: TextStyle(
-                            fontSize: 25.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: const [
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Text(
-                        "Email: ",
-                        style: TextStyle(fontSize: 17.0, color: Colors.grey),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text("user@gmail.com",
-                        style: TextStyle(fontSize: 17.0, color: Colors.grey)),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: const [
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Text(
-                        "Phone Number: ",
-                        style: TextStyle(fontSize: 17.0, color: Colors.grey),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text("05434374349",
-                        style: TextStyle(fontSize: 17.0, color: Colors.grey)),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: const [
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Text(
-                        "School: ",
-                        style: TextStyle(fontSize: 17.0, color: Colors.grey),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text("X University",
-                        style: TextStyle(fontSize: 17.0, color: Colors.grey)),
-                  ],
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Text(
-                    "Shared Books: ",
-                    style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ],
+          const Padding(
+            padding: EdgeInsets.only(top: 15),
+            child: text_bar(
+              title: "Email",
+              text: "test@test.com",
             ),
           ),
-          const SizedBox(
-            height: 100,
+          const Padding(
+            padding: EdgeInsets.only(top: 15),
+            child: text_bar(
+              title: "Birthday",
+              text: "01/01/2000",
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 15),
+            child: text_bar(
+              title: "Address",
+              text: "test",
+            ),
           ),
         ],
       ),

@@ -1,7 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/client_profile_info.dart';
+import 'package:ogrenciden/ClientProfileInfo/client_profile_info.dart';
 
 import '../core/constants/navigation/navigation_constants.dart';
 import '../core/init/navigation/navigation_service.dart';
