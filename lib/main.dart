@@ -1,8 +1,14 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/core/routs.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
 
-void main() {
+import 'package:ogrenciden/LandingScreen/landing.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
+import 'package:ogrenciden/core/routs.dart';
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -20,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         //home: LandingScreen(),
         //home: MyHomePage(title: 'trial'),
-        home: login(),
+        home: LandingScreen(),
         routes: routes);
   }
 }

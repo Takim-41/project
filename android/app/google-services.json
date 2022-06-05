@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "68549200665",
+    "project_id": "login-register-ogrencide-dab96",
+    "storage_bucket": "login-register-ogrencide-dab96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68549200665:android:be48d587a59d21ef951388",
+        "android_client_info": {
+          "package_name": "com.example.ogrenciden"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68549200665-s38tcns4he15vpmp752g3smd52cj0d3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYMCTxXrZo6LZKiEcOgeDLB5VIDqe_cuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68549200665-s38tcns4he15vpmp752g3smd52cj0d3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

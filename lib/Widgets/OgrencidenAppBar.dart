@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
 import 'package:ogrenciden/core/enums.dart';
 import 'package:ogrenciden/screens/FavScreen/favorites.dart';
 import 'package:ogrenciden/screens/LandingScreen/landing.dart';
@@ -57,7 +58,7 @@ class CusBottomNavigationBar extends StatelessWidget {
                     color: MenuState.profile == selectedMenu
                         ? kPrimaryColor
                         : inActiveIconColor),
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, login.routeName),
               ),
             ],
           ),
