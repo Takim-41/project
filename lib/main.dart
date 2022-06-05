@@ -1,10 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/client_profile_info.dart';
-
-import 'package:ogrenciden/LandingScreen/landing.dart';
-import 'package:ogrenciden/LoginScreens/loginScreen.dart';
+import 'package:ogrenciden/screens/LandingScreen/landing.dart';
 import 'package:ogrenciden/core/routs.dart';
 
 Future main() async {
@@ -27,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         //home: LandingScreen(),
         //home: MyHomePage(title: 'trial'),
-        home: ClientProfileInfo(),
+        home: const LandingScreen(),
         routes: routes);
   }
 }
