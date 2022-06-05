@@ -1,12 +1,14 @@
 import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/LoginScreens/dw-text-field.dart';
+import 'package:ogrenciden/LoginScreens/home.dart';
 import 'package:ogrenciden/LoginScreens/password-text.dart';
 import 'package:ogrenciden/LoginScreens/text-field2.dart';
 import 'package:ogrenciden/LoginScreens/login.dart';
+import 'package:ogrenciden/LoginScreens/users.dart';
 
 class Register extends StatefulWidget {
 
@@ -24,6 +26,41 @@ class _RegisterState extends State<Register> {
   double val = 0;
   bool switchScreen = true;
   Timer registertimer = Timer(Duration(seconds: 1),(){});
+
+  final mailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confimpasswordController = TextEditingController();
+
+  Future createUser() async{
+    final docUser = FirebaseFirestore.instance.collection('users').doc();
+    final user = users(email: mailController.text, password: passwordController.text,);
+
+    final json = user.toJson();
+
+    if(mailController.text.isNotEmpty && passwordController.text.isNotEmpty && confimpasswordController.text.isNotEmpty && passwordController.text == confimpasswordController.text){
+      await docUser.set(json);
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+            content: Text('Kayıt Oldunuz!'),
+        )
+      );
+      Navigator.push(context,
+          MaterialPageRoute(
+            builder: (context) => Home(),
+          )
+      );
+    }
+    else{
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Birşeyler Ters Gitti'),
+          ),
+      );
+
+    }
+
+  }
 
 
   @override
@@ -125,22 +162,29 @@ child: Column(
     SizedBox(
       height: 10,
     ),
-        NormalTextField(prefixIcon: accountIcon, labelText: 'Email', hintText: 'Lütfen Email adresinizi giriniz!'),
+        NormalTextField(
+            prefixIcon: accountIcon,
+            labelText: 'Email',
+            hintText: 'Lütfen Email adresinizi giriniz!',
+          controller: mailController,
+        ),
     SizedBox(
       height: 30,
     ),
-    PasswordText(labelText: 'Sifre', hintText: 'Lütfen Şifrenizi Giriniz'),
+    PasswordText(labelText: 'Sifre', hintText: 'Lütfen Şifrenizi Giriniz',controller: passwordController,),
     SizedBox(
       height: 30,
     ),
-    PasswordText(labelText: 'Tekrar Sifre', hintText: 'Lütfen Şifrenizi Tekrar Giriniz'),
+    PasswordText(labelText: 'Tekrar Sifre', hintText: 'Lütfen Şifrenizi Tekrar Giriniz', controller: confimpasswordController,),
     SizedBox(
       height: 60,
     ),
     SizedBox(
       width: 200,
       child: ElevatedButton(
-        onPressed: (){},
+        onPressed: (){
+          createUser();
+        },
         child: Text('Kayıt Ol',
           style: TextStyle(
             color: Colors.white,

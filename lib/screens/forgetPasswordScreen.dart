@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
 
 class password extends StatefulWidget {
   static String routeName = "/LoginScreens";

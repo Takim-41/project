@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:ogrenciden/LandingScreen/landing.dart';
-import 'package:ogrenciden/LoginScreens/forgetPasswordScreen.dart';
 import 'package:ogrenciden/LoginScreens/login.dart';
 
-import '../screens/LoginScreens/signupScreen.dart';
 
 //import 'package:login_signup_screen/login_form.dart';
 

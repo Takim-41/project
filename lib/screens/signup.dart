@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
+
 
 class signup extends StatefulWidget {
   static String routeName = "/LoginScreens";

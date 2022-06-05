@@ -1,6 +1,9 @@
 import 'dart:async';
+//import 'dart:html';
 import 'dart:math';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:ogrenciden/LoginScreens/home.dart';
 import 'package:ogrenciden/LoginScreens/Register.dart';
 import 'package:ogrenciden/LoginScreens/password-text.dart';
 import 'package:ogrenciden/LoginScreens/text-field2.dart';
@@ -20,6 +23,39 @@ class _LoginpState extends State<Loginp> {
   double val = 0;
   bool switchScreen = true;
   Timer timer = Timer(Duration(seconds: 1),(){});
+
+  final mailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  Future<void> verifyAccount(email, password) async{
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('email', isEqualTo: email)
+        .where('password', isEqualTo: password)
+        .get()
+        .then(
+            (QuerySnapshot querySnapshot){
+              querySnapshot.docs.forEach(
+                      (doc){}
+              );
+              final List<DocumentSnapshot> documents = querySnapshot.docs;
+              if(documents.isNotEmpty){
+                Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => Home(),
+                )
+                );
+              }
+              else{
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Email veya Şifrenizi Hatalı Girdiniz!'),
+                  ),
+                );
+              }
+            }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder<double>(
@@ -66,18 +102,20 @@ class _LoginpState extends State<Loginp> {
           SizedBox(
             height: 40,
           ),
-          NormalTextField(prefixIcon: accountIcon, labelText: 'Email', hintText: 'Lütfen Email adresinizi giriniz!',),
+          NormalTextField(prefixIcon: accountIcon, labelText: 'Email', hintText: 'Lütfen Email adresinizi giriniz!',controller: mailController,),
           SizedBox(
             height: 30,
           ),
-          PasswordText(labelText: 'Sifre', hintText: 'Lütfen Şifrenizi Giriniz'),
+          PasswordText(labelText: 'Sifre', hintText: 'Lütfen Şifrenizi Giriniz',controller: passwordController,),
           SizedBox(
             height: 50,
           ),
           SizedBox(
             width: 200,
           child: ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                verifyAccount(mailController.text, passwordController.text);
+              },
               child: Text('Giriş Yap',
               style: TextStyle(
                 color: Colors.white,

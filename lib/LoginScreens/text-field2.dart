@@ -5,10 +5,13 @@ class NormalTextField extends StatelessWidget {
   String labelText;
   String hintText;
 
+  TextEditingController controller;
+
   NormalTextField({
     required this.prefixIcon,
     required this.labelText,
     required this.hintText,
+    required this.controller,
 });
   //NormalTextField(InputDecoration decoration);
   @override
@@ -16,6 +19,7 @@ class NormalTextField extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 10.0,right: 10.0),
       child: TextField(
+        controller: controller,
         style: TextStyle(
           fontWeight: FontWeight.bold,
             color: Colors.indigo

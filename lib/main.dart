@@ -1,8 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/core/routs.dart';
-import 'package:ogrenciden/screens/LoginScreens/loginScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:ogrenciden/LoginScreens/loginScreen.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
