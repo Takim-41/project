@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ogrenciden/core/constants/navigation/navigation_constants.dart';
-import 'package:ogrenciden/ClientProfileInfo/client_profile_info.dart';
+import 'package:ogrenciden/screens/client_profile_info.dart';
 import 'package:ogrenciden/screens/product_info_page.dart';
 
 class NavigationRoute {

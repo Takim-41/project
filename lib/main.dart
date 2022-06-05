@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ogrenciden/ClientProfileInfo/client_profile_info.dart';
+import 'package:ogrenciden/screens/client_profile_info.dart';
 
 import 'package:ogrenciden/LandingScreen/landing.dart';
 import 'package:ogrenciden/LoginScreens/loginScreen.dart';

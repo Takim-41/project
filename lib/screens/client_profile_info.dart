@@ -7,7 +7,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:ogrenciden/ClientProfileInfo/text_bar.dart';
+import 'package:ogrenciden/Widgets/text_bar.dart';
 import 'package:ogrenciden/Widgets/OgrencidenAppBar.dart';
 import 'package:ogrenciden/core/enums.dart';
 
