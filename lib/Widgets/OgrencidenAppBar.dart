@@ -10,10 +10,10 @@ class CusBottomNavigationBar extends StatelessWidget {
       : super(key: key);
 
   final MenuState selectedMenu;
-  static const Color kPrimaryColor = Color(0xFFAAFF00);
+  static const Color kPrimaryColor = Color(0xFF212121);
   @override
   Widget build(BuildContext context) {
-    final Color inActiveIconColor = Color(0xFFB6B6B6);
+    final Color inActiveIconColor = Color(0xFFBDBDBD);
     return Container(
         padding: EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
