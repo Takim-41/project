@@ -3,7 +3,6 @@ import '../../../TempDatabase/tempProducts.dart';
 import '../../../core/size_config.dart';
 import '../../ListProductScreen/list_product.dart';
 
-
 class Categories extends StatelessWidget {
   const Categories({
     Key? key,
@@ -21,58 +20,58 @@ class Categories extends StatelessWidget {
                   image: "assets/images/books.png",
                   unis: "books",
                   press: () {
-                    List<TempProduct> _searchProduct = [] ;
+                    List<TempProduct> _searchProduct = [];
                     product.forEach((p) {
-                      if (p.category == "Books" ) {
+                      if (p.category == "Books") {
                         _searchProduct.add(p);
                       }
                     });
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ListScreen(product: _searchProduct),
+                        builder: (context) =>
+                            ListScreen(product: _searchProduct),
                       ),
                     );
-                  }
-              ),
-              SizedBox(height:10),
+                  }),
+              SizedBox(height: 10),
               CategoryCards(
                   image: "assets/images/electronics.png",
                   unis: "electronics",
                   press: () {
-                    List<TempProduct> _searchProduct = [] ;
+                    List<TempProduct> _searchProduct = [];
                     product.forEach((p) {
-                      if (p.category == "Electronics" ) {
+                      if (p.category == "Electronics") {
                         _searchProduct.add(p);
                       }
                     });
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ListScreen(product: _searchProduct),
+                        builder: (context) =>
+                            ListScreen(product: _searchProduct),
                       ),
                     );
-                  }
-              ),
-              SizedBox(height:10),
+                  }),
+              SizedBox(height: 10),
               CategoryCards(
                   image: "assets/images/notes.png",
                   unis: "notes",
                   press: () {
-                    List<TempProduct> _searchProduct = [] ;
+                    List<TempProduct> _searchProduct = [];
                     product.forEach((p) {
-                      if (p.category == "Notes" ) {
+                      if (p.category == "Notes") {
                         _searchProduct.add(p);
                       }
                     });
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ListScreen(product: _searchProduct),
+                        builder: (context) =>
+                            ListScreen(product: _searchProduct),
                       ),
                     );
-                  }
-              ),
+                  }),
             ],
           ),
         ),
@@ -81,14 +80,10 @@ class Categories extends StatelessWidget {
   }
 }
 
-
 class CategoryCards extends StatelessWidget {
-  const CategoryCards({
-    Key? key,
-    required this.image,
-    required this.press,
-    required this.unis
-  }) : super(key: key);
+  const CategoryCards(
+      {Key? key, required this.image, required this.press, required this.unis})
+      : super(key: key);
 
   final String unis, image;
   final GestureTapCallback press;
@@ -105,48 +100,34 @@ class CategoryCards extends StatelessWidget {
             height: getProportionateScreenHeight(90),
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Stack(
-                    children: [
-                      Image.asset(
-                          image,
-                          fit: BoxFit.cover
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color(0xFF343434).withOpacity(0.5),
-                                Color(0xFF343434).withOpacity(0.1)
-                              ],
-                            )
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: getProportionateScreenWidth(10),
-                            vertical: getProportionateScreenHeight(10)
-                        ),
-                        child: Text.rich(
-                            TextSpan(
-                                style: TextStyle(color: Colors.white),
-                                children:[
-                                  TextSpan(
-                                      text: "$unis",
-                                      style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: getProportionateScreenWidth(25),
-                                          fontWeight: FontWeight.bold
-                                      )
-                                  )
-                                  // TextSpan(text: " # products included") At the end can be added how many product is listed in this uni.
-                                ]
-                            )
-                        ),
-                      )
-                    ]
-                )
-            )
-        ),
+                child: Stack(children: [
+                  Image.asset(image, fit: BoxFit.cover),
+                  Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                      colors: [
+                        Color(0xFF343434).withOpacity(0.5),
+                        Color(0xFF343434).withOpacity(0.1)
+                      ],
+                    )),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: getProportionateScreenWidth(10),
+                        vertical: getProportionateScreenHeight(10)),
+                    child: Text.rich(TextSpan(
+                        style: TextStyle(color: Colors.white),
+                        children: [
+                          TextSpan(
+                              text: "$unis",
+                              style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: getProportionateScreenWidth(25),
+                                  fontWeight: FontWeight.bold))
+                          // TextSpan(text: " # products included") At the end can be added how many product is listed in this uni.
+                        ])),
+                  )
+                ]))),
       ),
     );
   }
