@@ -1,16 +1,26 @@
-# ogrenciden
+<h1 align="center">
+	<img
+		width="300"
+		alt="Ogrenciden"
+		src="https://github.com/Takim-41/project/blob/32f411636303cde2a54c2be1ce717d60b489ed23/assets/icons/icon.png">
+</h1>
 
-oua_bootcamp
+<h3 align="center">
+	A P2P  Marketplace for students
+</h3>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<p align="center">
+	<img src="https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/img/thelounge-screenshot.png" width="550">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## Credits 
+<a href="https://github.com/thelounge/thelounge#readme">Readme</a>
+<a href="https://www.figma.com/community/file/1104353311804271037">Design of the project </a>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Overview
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Installation and usage
+
