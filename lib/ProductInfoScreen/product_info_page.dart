@@ -4,6 +4,7 @@ import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ogrenciden/TempDatabase/tempProducts.dart';
 
 import 'package:ogrenciden/screens/client_profile_info.dart';
 
@@ -12,7 +13,6 @@ import '../core/enums.dart';
 
 String imagePath = "assets/images/";
 
-final List<String> imgList = ["${imagePath}book1.jpg", "${imagePath}book2.jpg"];
 
 // final List<String> imgList = [
 //   'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
@@ -23,8 +23,9 @@ final List<String> imgList = ["${imagePath}book1.jpg", "${imagePath}book2.jpg"];
 //   'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
 // ];
 class ProductInfoPage extends StatefulWidget {
-  const ProductInfoPage({Key? key}) : super(key: key);
+  const ProductInfoPage({Key? key, this.product}) : super(key: key);
   static String routeName = "/ProductInfoScreen";
+  final TempProduct? product;
 
   @override
   State<ProductInfoPage> createState() => _ProductInfoPageState();
@@ -47,11 +48,11 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                     aspectRatio: 2.0,
                     enlargeCenterPage: true,
                   ),
-                  items: imageSliders,
+                  items: imageSliders(widget.product!.imageList),
                 ),
               ),
               Text(
-                "Calculus 1",
+                widget.product!.title,
                 style: const TextStyle(fontSize: 32.0, color: Colors.grey),
               ),
               Padding(
@@ -78,10 +79,10 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      "This book is second hand. It may help your work in CALCULUS I lecture in university. Our teachers offered and really popular book in engineering.",
+                      widget.product!.description,
                       style: TextStyle(fontSize: 17.0, color: Colors.grey),
                     ),
                   ),
@@ -111,45 +112,41 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
         ));
   }
 
-  final List<Widget> imageSliders = imgList
+  List<Widget> imageSliders(List<String> imgList) {
+    final List<Widget> images = imgList
       .map((item) => Container(
-            child: Container(
-              margin: EdgeInsets.all(5.0),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                  child: Stack(
-                    children: <Widget>[
-                      Image.asset(item, fit: BoxFit.cover, width: 1000.0),
-                      Positioned(
-                        bottom: 0.0,
-                        left: 0.0,
-                        right: 0.0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color.fromARGB(200, 0, 0, 0),
-                                Color.fromARGB(0, 0, 0, 0)
-                              ],
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter,
-                            ),
-                          ),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
-                          child: Text(
-                            'No. ${imgList.indexOf(item)} image',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-            ),
-          ))
+    child: Container(
+      margin: EdgeInsets.all(5.0),
+      child: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          child: Stack(
+            children: <Widget>[
+              Image.asset(item, fit: BoxFit.cover, width: 1000.0),
+              Positioned(
+                bottom: 0.0,
+                left: 0.0,
+                right: 0.0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(200, 0, 0, 0),
+                        Color.fromARGB(0, 0, 0, 0)
+                      ],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
+                    ),
+                  ),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 20.0),
+                ),
+              ),
+            ],
+          )),
+    ),
+  ))
       .toList();
+    return images;
+}
+
 }

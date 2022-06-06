@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class TempProduct{
 
   String title, description, owner, image, category, university;
+  List<String> imageList;
   int price, id;
 
   TempProduct({
@@ -13,7 +14,8 @@ class TempProduct{
     required this.image,
     required this.price,
     required this.category,
-    required this.university
+    required this.university,
+    required this.imageList
   });
 }
 
@@ -26,17 +28,19 @@ List<TempProduct> product =[
       image: "assets/images/bilkent_logo.png",
       price: 200,
       category: "Electronics",
-      university: "METU"
+      university: "METU",
+      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 2,
       title:"Physc 102 Books",
       description: "Clear and fair price.",
       owner: "Kemal",
-      image: "assets/images/bilkent_logo.png",
+      image: "assets/images/books.png",
       price: 120,
       category: "Books",
-      university: "Bilkent University"
+      university: "Bilkent University",
+      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 3,
@@ -46,7 +50,8 @@ List<TempProduct> product =[
       image: "assets/images/bilkent_logo.png",
       price: 500,
       category: "Notes",
-      university: "METU"
+      university: "METU",
+      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 4,
@@ -56,16 +61,19 @@ List<TempProduct> product =[
       image: "assets/images/bilkent_logo.png",
       price: 50,
       category: "Notes",
-      university: "Bilkent University"
+      university: "Bilkent University",
+      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 5,
       title:"MBG 102 Books",
       description: "Clear and fair price.",
       owner: "Kemal",
-      image: "assets/images/bilkent_logo.png",
+      image: "assets/images/books.png",
       price: 170,
       category: "Books",
-      university: "ITU"
+      university: "ITU",
+      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
   )
 ];
+
