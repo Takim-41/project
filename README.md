@@ -16,6 +16,7 @@
 
 ## Credits 
 <a href="https://github.com/thelounge/thelounge#readme">Readme</a>
+<br />
 <a href="https://www.figma.com/community/file/1104353311804271037">Design of the project </a>
 
 ## Overview
