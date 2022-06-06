@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
                     crossAxisSpacing: getProportionateScreenWidth(16),
                     childAspectRatio: 0.75
                 ),
-                itemBuilder: (context, index) => ItemCard(product: product[index], press: () => Navigator.push(context, new MaterialPageRoute(builder: (context) => new ProductInfoPage())))
+                itemBuilder: (context, index) => ItemCard(product: product[index], press: () => Navigator.push(context, new MaterialPageRoute(builder: (context) => new ProductInfoPage(product: product[index],))))
             )
             )
           ],

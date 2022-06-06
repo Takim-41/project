@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
                     press: () => Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => new ProductInfoPage())))))
+                            builder: (context) => new ProductInfoPage(product: product[index]))))))
       ],
     ));
   }

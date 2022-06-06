@@ -38,13 +38,13 @@ class CusBottomNavigationBar extends StatelessWidget {
                           : inActiveIconColor),
                   onPressed: () =>
                       Navigator.pushNamed(context, LandingScreen.routeName)),
-              IconButton(
+              /*IconButton(
                 icon: SvgPicture.asset("assets/icons/chat.svg",
                     color: MenuState.message == selectedMenu
                         ? kPrimaryColor
                         : inActiveIconColor),
                 onPressed: () {},
-              ),
+              ),*/
               IconButton(
                 icon: SvgPicture.asset("assets/icons/heart.svg",
                     color: MenuState.favourite == selectedMenu
