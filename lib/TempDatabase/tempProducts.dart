@@ -71,7 +71,7 @@ List<TempProduct> product =[
       title:"MBG 102 Books",
       description: "Clear and fair price.",
       owner: owners[0],
-      image: "assets/images/books.png",
+      image: "assets/images/book1.jpg",
       price: 170,
       category: "Books",
       university: "ITU",
