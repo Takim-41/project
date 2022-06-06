@@ -27,44 +27,44 @@ List<TempProduct> product =[
       title:"Basys3",
       description: "Clear and fair price.",
       owner: owners[0],
-      image: "assets/images/bilkent_logo.png",
+      image: "assets/images/book1.jpg",
       price: 200,
       category: "Electronics",
       university: "METU",
-      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
+      imageList: ["assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 2,
       title:"Physc 102 Books",
       description: "Clear and fair price.",
       owner: owners[1],
-      image: "assets/images/books.png",
+      image: "assets/images/book2.jpg",
       price: 120,
       category: "Books",
       university: "Bilkent University",
-      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
+      imageList: ["assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 3,
       title:"Temp 102 Notes",
       description: "Clear and fair price.",
       owner: owners[2],
-      image: "assets/images/bilkent_logo.png",
+      image: "assets/images/book2.jpg",
       price: 500,
       category: "Notes",
       university: "METU",
-      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
+      imageList: ["assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 4,
       title:"Chem 102 Notes",
       description: "Clear and fair price.",
       owner: owners[3],
-      image: "assets/images/bilkent_logo.png",
+      image: "assets/images/book1.jpg",
       price: 50,
       category: "Notes",
       university: "Bilkent University",
-      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
+      imageList: ["assets/images/books.png","assets/images/book2.jpg"]
   ),
   TempProduct(
       id: 5,
@@ -75,7 +75,7 @@ List<TempProduct> product =[
       price: 170,
       category: "Books",
       university: "ITU",
-      imageList: ["assets/images/bilkent_logo.png","assets/images/books.png","assets/images/book2.jpg"]
+      imageList: ["assets/images/books.png","assets/images/book2.jpg"]
   )
 ];
 
