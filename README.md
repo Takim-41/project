@@ -20,8 +20,20 @@
 <a href="https://www.figma.com/community/file/1104353311804271037">Design of the project </a>
 
 ## Overview
+Ogrenciden is a new P2P marketplace for University Students in Turkey.
+<br />
+You can sell or buy from other students so you don't have to pay extra for middleman.
+<br />
+Right now you can sell your old books, lab equipment or notes you take in classes.
+<br />
 
 
 
 ## Installation and usage
+If you want to work on this project 
+```
+Git Clone https://github.com/Takim-41/project.git
+```
+
+If you want to check app just download latest release
 
