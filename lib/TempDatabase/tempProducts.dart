@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ogrenciden/TempDatabase/ownerProducts.dart';
 
 class TempProduct{
 
-  String title, description, owner, image, category, university;
+  String title, description,  image, category, university;
+  OwnerProduct owner;
   List<String> imageList;
   int price, id;
 
@@ -24,7 +26,7 @@ List<TempProduct> product =[
       id: 1,
       title:"Basys3",
       description: "Clear and fair price.",
-      owner: "Kemal",
+      owner: owners[0],
       image: "assets/images/bilkent_logo.png",
       price: 200,
       category: "Electronics",
@@ -35,7 +37,7 @@ List<TempProduct> product =[
       id: 2,
       title:"Physc 102 Books",
       description: "Clear and fair price.",
-      owner: "Kemal",
+      owner: owners[1],
       image: "assets/images/books.png",
       price: 120,
       category: "Books",
@@ -46,7 +48,7 @@ List<TempProduct> product =[
       id: 3,
       title:"Temp 102 Notes",
       description: "Clear and fair price.",
-      owner: "Kemal",
+      owner: owners[2],
       image: "assets/images/bilkent_logo.png",
       price: 500,
       category: "Notes",
@@ -57,7 +59,7 @@ List<TempProduct> product =[
       id: 4,
       title:"Chem 102 Notes",
       description: "Clear and fair price.",
-      owner: "Kemal",
+      owner: owners[3],
       image: "assets/images/bilkent_logo.png",
       price: 50,
       category: "Notes",
@@ -68,7 +70,7 @@ List<TempProduct> product =[
       id: 5,
       title:"MBG 102 Books",
       description: "Clear and fair price.",
-      owner: "Kemal",
+      owner: owners[0],
       image: "assets/images/books.png",
       price: 170,
       category: "Books",

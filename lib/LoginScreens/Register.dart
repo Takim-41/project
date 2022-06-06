@@ -18,7 +18,7 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   var school = <String>[];
-  String selected_school = "Okulunuz";
+  String selected_school = "Your University";
   Icon accountIcon = Icon(
     Icons.account_circle,
     color: Colors.indigoAccent,
@@ -42,7 +42,7 @@ class _RegisterState extends State<Register> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-            content: Text('Kayıt Oldunuz!'),
+            content: Text('Registered!'),
         )
       );
       Navigator.push(context,
@@ -54,7 +54,7 @@ class _RegisterState extends State<Register> {
     else{
       ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Birşeyler Ters Gitti'),
+            content: Text('There is something wrong'),
           ),
       );
 
@@ -66,7 +66,7 @@ class _RegisterState extends State<Register> {
   @override
   void initState() {
     super.initState();
-    school.add("Okulunuz");
+    school.add("Your University");
     school.add("Akdeniz Üniversitesi");
     school.add("Boğaziçi Üniversitesi");
     school.add("Ege Üniversitesi");
@@ -116,7 +116,7 @@ child: Column(
       width: 200,
       child: Center(
       child: Text(
-        'Kayıt Ol',
+        'Sign Up',
         style: TextStyle(
           color: Colors.white,
           fontSize: 30,
@@ -165,17 +165,17 @@ child: Column(
         NormalTextField(
             prefixIcon: accountIcon,
             labelText: 'Email',
-            hintText: 'Lütfen Email adresinizi giriniz!',
+            hintText: 'Please enter your email!',
           controller: mailController,
         ),
     SizedBox(
       height: 30,
     ),
-    PasswordText(labelText: 'Sifre', hintText: 'Lütfen Şifrenizi Giriniz',controller: passwordController,),
+    PasswordText(labelText: 'Password', hintText: 'Please enter password',controller: passwordController,),
     SizedBox(
       height: 30,
     ),
-    PasswordText(labelText: 'Tekrar Sifre', hintText: 'Lütfen Şifrenizi Tekrar Giriniz', controller: confimpasswordController,),
+    PasswordText(labelText: 'Re-Password', hintText: 'Please re-enter password', controller: confimpasswordController,),
     SizedBox(
       height: 60,
     ),
@@ -185,7 +185,7 @@ child: Column(
         onPressed: (){
           createUser();
         },
-        child: Text('Kayıt Ol',
+        child: Text('Sign Up',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -212,7 +212,7 @@ child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Zaten Bir Hesabın Var Mı?',
+          'Do you have already account?',
           style: TextStyle(
             color: Colors.blue,
           ),
@@ -228,7 +228,7 @@ child: Column(
             });
           },
           child: Text(
-            'Giriş Yap!',
+            'Sign in!',
             style: TextStyle(
                 color: Colors.indigo
             ),

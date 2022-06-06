@@ -48,7 +48,7 @@ class _LoginpState extends State<Loginp> {
               }
               else{
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Email veya Şifrenizi Hatalı Girdiniz!'),
+                  const SnackBar(content: Text('Your entered Email or Password is wrong!'),
                   ),
                 );
               }
@@ -93,7 +93,7 @@ class _LoginpState extends State<Loginp> {
             height: 100,
             width: 200,
             child: Center(
-              child: Text('Giriş',style: TextStyle(
+              child: Text('Sign In',style: TextStyle(
                 color: Colors.white,
                 fontSize: 30,
               ),),
@@ -102,11 +102,11 @@ class _LoginpState extends State<Loginp> {
           SizedBox(
             height: 40,
           ),
-          NormalTextField(prefixIcon: accountIcon, labelText: 'Email', hintText: 'Lütfen Email adresinizi giriniz!',controller: mailController,),
+          NormalTextField(prefixIcon: accountIcon, labelText: 'Email', hintText: 'Please enter your emails!',controller: mailController,),
           SizedBox(
             height: 30,
           ),
-          PasswordText(labelText: 'Sifre', hintText: 'Lütfen Şifrenizi Giriniz',controller: passwordController,),
+          PasswordText(labelText: 'Password', hintText: 'Please enter password',controller: passwordController,),
           SizedBox(
             height: 50,
           ),
@@ -116,7 +116,7 @@ class _LoginpState extends State<Loginp> {
               onPressed: (){
                 verifyAccount(mailController.text, passwordController.text);
               },
-              child: Text('Giriş Yap',
+              child: Text('Sign In',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
@@ -142,7 +142,7 @@ class _LoginpState extends State<Loginp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Henüz üye değil misin?',
+                'Don\'t sign up yet?',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
@@ -158,7 +158,7 @@ class _LoginpState extends State<Loginp> {
                   });
                 },
                 child: Text(
-                  'Hemen üye ol!',
+                  'Sign Up!',
                   style: TextStyle(
                     color: Colors.indigo
                   ),

@@ -6,17 +6,20 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ogrenciden/TempDatabase/ownerProducts.dart';
 
 import 'package:ogrenciden/Widgets/text_bar.dart';
 import 'package:ogrenciden/Widgets/OgrencidenAppBar.dart';
 import 'package:ogrenciden/core/enums.dart';
 
 class ClientProfileInfo extends StatefulWidget {
+  OwnerProduct? owner;
   static String routeName = "/ClientProfileInfo";
   final String? eposta;
-  const ClientProfileInfo({
+  ClientProfileInfo({
     Key? key,
     this.eposta,
+    this.owner
   }) : super(key: key);
 
   @override
@@ -67,39 +70,39 @@ class _ClientProfileInfoState extends State<ClientProfileInfo> {
             padding: const EdgeInsets.only(top: 5),
             child: Center(
                 child: Text(
-              "john Doe",
+              widget.owner!.fullname,
               style: GoogleFonts.poppins(
                   color: const Color(0xFF212121),
                   fontWeight: FontWeight.w600,
                   fontSize: 17),
             )),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 15),
             child: text_bar(
               title: "Phone Number",
-              text: "05555555555",
+              text: widget.owner!.phoneNum,
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 15),
             child: text_bar(
               title: "Email",
-              text: "test@test.com",
+              text: widget.owner!.email,
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 15),
             child: text_bar(
               title: "Birthday",
-              text: "01/01/2000",
+              text: widget.owner!.birthday,
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 15),
             child: text_bar(
               title: "Address",
-              text: "test",
+              text: widget.owner!.adress,
             ),
           ),
         ],

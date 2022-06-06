@@ -16,7 +16,7 @@ final Map<String, WidgetBuilder> routes = {
         product: [],
       ),
   ProductInfoPage.routeName: (context) => const ProductInfoPage(),
-  ClientProfileInfo.routeName: (context) => const ClientProfileInfo(),
+  ClientProfileInfo.routeName: (context) => ClientProfileInfo(),
   FavScreen.routeName: (context) => const FavScreen(),
   login.routeName: (context) => const login(),
 };

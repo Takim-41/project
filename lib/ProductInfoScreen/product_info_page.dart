@@ -87,7 +87,7 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 30),
+                    padding: EdgeInsets.only(top: 30),
                     child: ElevatedButton(
                         style: ButtonStyle(
                           minimumSize:
@@ -98,7 +98,7 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                         onPressed: () => Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (context) => new ClientProfileInfo())),
+                                builder: (context) => new ClientProfileInfo(owner: widget.product!.owner))),
                         child: Text("Contact Info",
                             style: GoogleFonts.poppins(
                                 fontSize: 16,
