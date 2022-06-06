@@ -11,7 +11,7 @@
 
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/img/thelounge-screenshot.png" width="550">
+	<img src="https://github.com/Takim-41/project/blob/9c34b6efb2c925a09af1ea139ce7e3855dca255f/assets/Screen%20Shots/landing.PNG" width="550">
 </p>
 
 ## Credits 
