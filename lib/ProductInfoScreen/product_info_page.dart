@@ -1,6 +1,9 @@
+// ignore_for_file: unnecessary_new, avoid_unnecessary_containers, prefer_const_constructors
+
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:ogrenciden/screens/client_profile_info.dart';
 
@@ -31,118 +34,81 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CusBottomNavigationBar(selectedMenu: MenuState.home),
-      appBar: AppBar(
-        title: const Text('Book Info'),
-        backgroundColor: Colors.green,
-        leading: const BackButton(
-          color: Colors.black,
-          //onPressed: () {},
-        ),
-        actions: <Widget>[
-          IconButton(
-            iconSize: 30.0,
-            icon: Icon(
-              Icons.shopping_basket_sharp,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              // do something
-            },
-          ),
-          // Badge(
-          //   badgeContent: Text('3'),
-          //   child: Icon(Icons.shopping_basket_sharp),
-          // )
-        ],
-      ),
-      body: Column(
-        children: [
-          Container(
-            child: CarouselSlider(
-              options: CarouselOptions(
-                //autoPlay: true,
-                aspectRatio: 2.0,
-                enlargeCenterPage: true,
-              ),
-              items: imageSliders,
-            ),
-          ),
-          Text(
-            "Calculus 1",
-            style: const TextStyle(fontSize: 32.0, color: Colors.grey),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Row(
-                  children: const [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "Description",
-                        style: TextStyle(
-                            fontSize: 25.0,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.yellow,
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Text(
-                    "This book is second hand. It may help your work in CALCULUS I lecture in university. Our teachers offered and really popular book in engineering.",
-                    style: TextStyle(fontSize: 17.0, color: Colors.grey),
+        bottomNavigationBar:
+            CusBottomNavigationBar(selectedMenu: MenuState.home),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 60),
+          child: Column(
+            children: [
+              Container(
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    //autoPlay: true,
+                    aspectRatio: 2.0,
+                    enlargeCenterPage: true,
                   ),
+                  items: imageSliders,
                 ),
-                // Align(
-                //   alignment: Alignment.bottomRight,
-                //   child: IconButton(
-                //     icon: Icon(Icons.add),
-                //     tooltip: 'Increase volume by 10',
-                //     onPressed: () {
-                //       print("ss");
-                //     },
-                //   ),
-                // ),
-                Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white, width: 2),
-                      color: Colors.green,
-                    ),
-                    child: IconButton(
-                      iconSize: 25,
-                      padding: const EdgeInsets.all(20),
-                      icon: const Icon(
-                        Icons.add,
-                        color: Colors.white,
+              ),
+              Text(
+                "Calculus 1",
+                style: const TextStyle(fontSize: 32.0, color: Colors.grey),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(children: [
+                  Row(
+                    children: const [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          "Description",
+                          style: TextStyle(
+                              fontSize: 25.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      onPressed: () {
-                        // do something here
-                      },
-                    )),
-                ElevatedButton(
-                    onPressed: () => Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => new ClientProfileInfo())),
-                    child: Text("Contact Info"))
-              ],
-            ),
+                      Icon(
+                        Icons.star,
+                        color: Colors.yellow,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      "This book is second hand. It may help your work in CALCULUS I lecture in university. Our teachers offered and really popular book in engineering.",
+                      style: TextStyle(fontSize: 17.0, color: Colors.grey),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize:
+                              MaterialStateProperty.all<Size>(Size(343, 64)),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color(0xFFFEE440)),
+                        ),
+                        onPressed: () => Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (context) => new ClientProfileInfo())),
+                        child: Text("Contact Info",
+                            style: GoogleFonts.poppins(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF212121)))),
+                  ),
+                ]),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
+        ));
   }
 
   final List<Widget> imageSliders = imgList
